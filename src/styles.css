@@ -1,4 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";  
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 body {
 
@@ -6,3 +7,15 @@ body {
 
 }
 
+h1, h2, h3, h4, h5, h6, p, span, li, a, a:hover, i{
+
+    font-family: "Goudy Old Style";
+    color: white;
+
+}
+
+a:hover, a {
+
+    text-decoration: none;
+
+}
