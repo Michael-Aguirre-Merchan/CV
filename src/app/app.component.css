@@ -4,11 +4,22 @@
 
 }
 
-.card-big {
+.for-back-img {
 
-    background-color: #17202A;
+    background-image: url(../assets/back.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     border-radius: 55px;
     
+
+}
+
+.for-back-color {
+
+    background-color: rgba(23, 32, 42, 95%);
+    border-radius: 55px;
 
 }
 
