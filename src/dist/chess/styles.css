@@ -8801,7 +8801,7 @@ select {
 
 }h1, h2, h3, h4, h5, h6, p, span, li, a, a:hover, i, div{
 
-    font-family: "Goudy Old Style";
+    font-family: "Goudy Old Style" !important;
     color: white;
 
 }a:hover, a {

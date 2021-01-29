@@ -1,1 +1,55 @@
-<p>about works!</p>
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <h2 class="about-title">About</h2>
+    
+        <div class="col-11 align-items-center">
+            
+            <div *ngFor="let read of reads">
+
+                <div class="card mb-3 read-more-card" [id]=read.id>
+                    <div class="card-body">
+                        <div class="title-icon">
+                      <h5 class="card-title read-card-title justify-content-between">{{read.title}}</h5>
+                      <button (click)="moreCardCode(read)" class="close-button"><i class="close-icon bi bi-x"></i></button>
+                    </div>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="card-deck" class="row justify-content-between card-deck" >
+
+                <div class="col-4" *ngFor="let card of cards" >
+
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">{{ card.title }}</h5>
+
+                            <p class="card-text">{{ card.text }}</p>
+
+                            <br>
+
+                            <div class="read-button">
+
+                                <button (click)="cardCode(card)">Read More</button>
+
+                            </div> 
+
+                        </div>
+
+                      </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
