@@ -1,1 +1,54 @@
-<p>history works!</p>
+<div class="container">
+
+    <div class="row justify-content-around">
+
+        <H1 class="contact-title">
+
+            Background
+            
+        </H1>
+
+        <div class="col-6 justify-content-end">
+
+            <h3 class="contact-title">
+
+                Work
+
+            </h3>
+
+            <ul class="list-unstyled lists">
+              <li class="media my-4" *ngFor="let work of works">
+                <hr>
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">{{work.title}}</h5>
+                  {{work.detail}}
+                </div>
+                <div class="align-self-center">
+                <img class="mr-3 media-image" src="../../assets/rec.png">
+                </div>
+              </li>
+            </ul>
+
+        </div>
+
+        <div class="col-6 justify-content-end">
+
+          <h3 class="contact-title">
+              Education
+          </h3>
+
+          <ul class="list-unstyled lists">
+            <li class="media my-4" *ngFor="let edu of edus">
+              <hr>
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">{{edu.title}}</h5>
+                {{edu.detail}}
+              </div>
+              <div class="align-self-center">
+              <img class="mr-3 media-image" src="../../assets/rec.png">
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+</div>

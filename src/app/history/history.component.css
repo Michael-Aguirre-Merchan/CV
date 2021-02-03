@@ -1,0 +1,72 @@
+.media {
+
+    display: inline-flex !important;
+    position: relative;
+
+}
+
+.lists {
+
+  overflow:auto; 
+  height: 32rem; 
+  position: relative;
+
+}
+
+.media-image {
+
+  position: relative;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 100px;
+    margin: 40px 0 40px 0;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 100px;
+    height: 10px;
+  }
+
+hr{ 
+  
+
+    height: 115%;
+    width: 5px;     
+    position: absolute !important; 
+    right: 1.8rem;
+    border-radius: 100px;
+    background-color: #0F151D;
+    opacity: 100%;
+
+}
+
+.media-body {
+
+background-color: #171C2A;
+padding: 20px;
+
+}
+
+.my-4 {
+
+margin-bottom: 0 !important;
+
+}
+
+.contact-title{
+
+    margin: 50px 0 15px 0px;
+
+}
