@@ -67,3 +67,14 @@ input[type=text], input[type=email], textarea, textarea:focus {
     display: block;
 
 }
+
+
+@media only screen and (max-width: 767px) {
+
+    .second-card {
+
+        margin-top: 30px;
+
+    }
+
+}

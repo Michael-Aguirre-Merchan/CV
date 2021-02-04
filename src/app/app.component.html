@@ -2,25 +2,53 @@
 
   <div class="row row-margin">
 
-    <div class="col-12 card-big">
+    <div class="col-12">
 
       <div class="for-back-img">
       <div class="for-back-color">
         
-
-        <div class="row justify-content-between">
+        <div class="row no-padding justify-content-end" style="position: relative;">
 
           <div class="col-2">
 
+            <div class="normal-menu">
+
             <app-menu></app-menu>
+
+            </div>
 
           </div>
 
-          <div class="col-10">
+          <div id="positionMenu" class="col-1">
+
+            <div class="dots-container">
+
+            <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
+
+          </div>
+
+          </div>     
+
+
+          <div  class="col-11 col-xl-10" style="position: relative;">
+
+            <div id="body" class="dark-menu"></div>
 
             <router-outlet></router-outlet>
 
           </div>
+
+
+          <!-- Responsive Menu - Start -->
+
+          <div>
+          <div id="responsiveMenu" class="responsive-menu">
+            <app-menu></app-menu>
+            <a class="close" (click)="closeMenu()">&times;</a>
+          </div>
+        </div>
+
+          <!-- Responsive Menu - End -->
 
         </div>
 

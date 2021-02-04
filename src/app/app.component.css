@@ -1,6 +1,6 @@
 .row-margin {
 
-    margin: 2% !important;
+    margin: 2%;
 
 }
 
@@ -23,8 +23,116 @@
 
 }
 
+.no-padding {
+
+    padding-right: 0;
+    margin-right: 0;
+
+}
+
 .col-2 {
 
     padding: 0 !important;
 
 }
+
+
+.responsive-menu {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .dark-menu {
+
+    position: absolute;
+    height: 100%;
+    width: 99%;
+    background-color: transparent;
+    border-radius: 0 55px 55px 0;
+    transition: background 0.5s ease-in-out;
+
+  }
+
+  .dots-buton {
+
+    color: black;
+
+  }
+
+  /* .dots-container{
+
+    width: 100%;
+    height: same-as-width;
+    background-color: aqua;
+
+  } */
+
+  .open-menu {
+
+    display: none;
+
+  }
+
+  .col-1 {
+
+    display: none;
+    background-color: transparent;
+    border-radius: 55px 0 0 55px;
+    
+  }
+
+  @media only screen and (max-width: 1199px) {
+    
+    .open-menu, .col-1{
+
+        display: block
+
+    }
+
+    .normal-menu, .col-2 {
+
+        display: none;
+
+    }
+
+    .for-back-img, .for-back-color, .dark-menu {
+
+      border-radius: 0 !important;
+
+    }
+
+    .row-margin {
+
+      /* margin: 0 0 2% 0; */
+      margin: 0;
+
+    }
+
+    .col-11 {
+
+      padding: 0 0 40px 0;
+
+    }
+
+    .col-1 {
+
+      padding: 0 0 0 var(--bs-gutter-x,);
+
+    }
+    
+  }

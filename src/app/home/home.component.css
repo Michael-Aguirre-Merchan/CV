@@ -26,3 +26,27 @@
     padding: 50px 40px 50px 40px;
 
 }
+
+.test-img {
+
+    width: 25rem;
+    height: auto;
+
+}
+
+.img-div {
+
+    width: fit-content;
+    margin: auto;
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .text-col {
+
+        margin-top: 30px;
+
+    }
+
+}
