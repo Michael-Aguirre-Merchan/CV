@@ -2,9 +2,9 @@
 
     <div class="row justify-content-center">
 
-        <div class="col-7">
+        <div #divToMeasure class="col-7">
 
-            <ngx-chess-board style="width: 100%;"></ngx-chess-board>
+            <ngx-chess-board #board [size]="this.size" ></ngx-chess-board>
 
         </div>
 

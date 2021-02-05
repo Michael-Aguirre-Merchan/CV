@@ -18,7 +18,6 @@ export class AppComponent {
 
     var ab:any;
     var ad:any;
-    var p:any;
 
     ab = document.getElementById("responsiveMenu")
     ad = document.getElementById("body")
