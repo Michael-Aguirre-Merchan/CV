@@ -1,7 +1,20 @@
 .row-margin {
 
-    margin: 2%;
+    margin: 1% 0.5%;
 
+}
+
+.master {
+
+  padding: 0;
+
+}
+
+.right-part {
+
+  position: relative; 
+  padding-right: 0;
+  
 }
 
 .for-back-img {
@@ -11,7 +24,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 55px;
+    /* border-radius: 55px; */
     
 
 }
@@ -19,8 +32,10 @@
 .for-back-color {
 
     background-color: rgba(23, 32, 42, 95%);
-    border-radius: 55px;
-
+    /* border-radius: 55px; */
+    overflow-y: auto;
+    height: 96vh;
+    overflow-x: hidden;
 }
 
 .no-padding {
@@ -30,29 +45,24 @@
 
 }
 
-.col-2 {
+ .col-2 {
 
-    padding: 0 !important;
+    padding-right: 0 !important;
 
-}
+} 
 
 
 .responsive-menu {
-    height: 100%;
-    width: 0;
-    position: fixed; 
+    display: none;
+    position: fixed;
     top: 0;
-    left: 0;
-    background-color: transparent;
-    overflow-x: hidden;
-    transition: 0.5s;
   }
   
   /* Position and style the close button (top right corner) */
   .close {
-    position: absolute;
+    position: relative;
     top: 0;
-    right: 25px;
+    left: 120px;
     font-size: 36px;
     margin-left: 50px;
   }
@@ -63,42 +73,71 @@
     height: 100%;
     width: 99%;
     background-color: transparent;
-    border-radius: 0 55px 55px 0;
     transition: background 0.5s ease-in-out;
+    margin-left: 200px;
+
+  }
+
+  .dots-container{
+
+    background-color: #171C2A;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 5px 20px;
+    display: none;
 
   }
 
   .dots-buton {
 
-    color: black;
+    color: rgba(255, 255, 255, 50%);
+    font-size: 30px;
+    
 
   }
 
-  /* .dots-container{
+  .dots-container:hover {
 
-    width: 100%;
-    height: same-as-width;
-    background-color: aqua;
+    color:rgba(255, 255, 255, 100%);
 
-  } */
+  }
 
   .open-menu {
 
     display: none;
+    background-color: transparent;
+    border-color: transparent;
 
   }
 
-  .col-1 {
+  .footer {
 
-    display: none;
-    background-color: transparent;
-    border-radius: 55px 0 0 55px;
+    margin: 30px 0 0 0;
+    padding: 0 40px;
+
+  }
+
+  .footer-container {
+
     
+    background-color:#171C2A;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+    
+  }
+
+  .body-margin {
+
+    margin-bottom: 70px;
+
   }
 
   @media only screen and (max-width: 1199px) {
     
-    .open-menu, .col-1{
+    .open-menu {
 
         display: block
 
@@ -110,12 +149,6 @@
 
     }
 
-    .for-back-img, .for-back-color, .dark-menu {
-
-      border-radius: 0 !important;
-
-    }
-
     .row-margin {
 
       /* margin: 0 0 2% 0; */
@@ -123,15 +156,25 @@
 
     }
 
-    .col-11 {
+    .footer-container {
 
-      padding: 0 0 40px 0;
+      width: 100%;
+      left: 1%;
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      
+    }
+
+    .responsive-menu-fix {
+
+      padding-top: 70px;
 
     }
 
-    .col-1 {
+    .dots-container {
 
-      padding: 0 0 0 var(--bs-gutter-x,);
+      display: block;
 
     }
     

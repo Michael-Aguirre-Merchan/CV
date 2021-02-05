@@ -5,14 +5,14 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 50px;
+    /* border-radius: 50px; */
 
 }
 
 .jumbo-back-color {
 
     background-color: rgba(30, 41, 52, 86%);
-    border-radius: 50px;
+    /* border-radius: 50px; */
 }
 
 .fix-text {
