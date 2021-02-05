@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid master">
 
   <div class="row row-margin">
 
@@ -19,22 +19,29 @@
 
           </div>
 
-          <div id="positionMenu" class="col-1">
+
+          <div  class="col-12 col-xl-10 right-part">
 
             <div class="dots-container">
+              
+              <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
 
-            <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
-
-          </div>
-
-          </div>     
-
-
-          <div  class="col-11 col-xl-10" style="position: relative;">
+                </div>  
 
             <div id="body" class="dark-menu"></div>
-
+            <div class="responsive-menu-fix">
             <router-outlet></router-outlet>
+            </div>
+
+            <div class="col-11 col-xl-10 footer">
+
+              <footer class="footer-container">
+            
+                2021 All Rights Reserved.
+            
+              </footer>
+            
+            </div>
 
           </div>
 
@@ -51,7 +58,6 @@
           <!-- Responsive Menu - End -->
 
         </div>
-
       </div>
       </div>
     </div>
@@ -59,3 +65,4 @@
   </div>
   
 </div>
+

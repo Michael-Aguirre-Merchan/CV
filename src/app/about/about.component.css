@@ -2,7 +2,7 @@
 
     margin: 0px 5px 20px 5px;
     background-color: #171C2A;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 
 }
 
@@ -15,7 +15,7 @@
 
     background-color: #171C2A;
     display: none;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 30%);
 
 }

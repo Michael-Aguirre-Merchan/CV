@@ -11,9 +11,9 @@ export class AppComponent {
 
   openMenu() {
 
-    var element = document.getElementById("positionMenu")!
+    // var element = document.getElementById("positionMenu")!
 
-    var pos = element.getBoundingClientRect();
+    // var pos = element.getBoundingClientRect();
     // console.log(pos.top, pos.right, pos.bottom, pos.left);
 
     var ab:any;
@@ -26,12 +26,13 @@ export class AppComponent {
     
     // ab.style.marginLeft = "250px";
     ad.style.backgroundColor = "rgba(0,0,0,0.5)";
-    
-    ab.style.width = "250px";
-    ab.style.left = pos.left+'px'
-    ab.style.margin = "0"
+    ad.style.marginLeft = "0";
+    ab.style.display = "block";
+    // ab.style.left = pos.left+'px'
+
+    // ab.style.margin = "0"
     // ab.style.top = pos.top+'px'
-    ab.style.borderRadius = "0" 
+    // ab.style.borderRadius = "0" 
     
   }
   
@@ -43,9 +44,10 @@ export class AppComponent {
     ac = document.getElementById("responsiveMenu")
     ae = document.getElementById("body")
 
-    ac.style.width = "0";
+    ac.style.display = "none";
 
     ae.style.backgroundColor = "transparent";
+    ae.style.marginLeft = "200px"
     
   } 
 
