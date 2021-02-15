@@ -5,64 +5,63 @@
     <div class="col-12">
 
       <div class="for-back-img">
-      <div class="for-back-color">
-        
-        <div class="row no-padding justify-content-end" style="position: relative;">
+        <div class="for-back-color">
 
-          <div class="col-2">
+          <div class="row no-padding justify-content-end" style="position: relative;">
 
-            <div class="normal-menu">
+            <div class="col-2">
 
-            <app-menu></app-menu>
+              <div class="normal-menu">
+
+                <app-menu></app-menu>
+
+              </div>
 
             </div>
 
-          </div>
 
+            <div class="col-12 col-xl-10 right-part">
 
-          <div  class="col-12 col-xl-10 right-part">
+              <div class="dots-container">
 
-            <div class="dots-container">
-              
-              <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
+                <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
 
-                </div>  
+              </div>
 
-            <div id="body" class="dark-menu"></div>
-            <div class="responsive-menu-fix">
-            <router-outlet></router-outlet>
+              <div id="body" class="dark-menu"></div>
+              <div class="responsive-menu-fix">
+                <router-outlet></router-outlet>
+              </div>
+
+              <div class="col-11 col-xl-10 footer" *ngIf="router.url != '/about'">
+
+                <footer class="footer-container">
+
+                  2021 All Rights Reserved.
+
+                </footer>
+
+              </div>
+
             </div>
 
-            <div class="col-11 col-xl-10 footer">
 
-              <footer class="footer-container">
-            
-                2021 All Rights Reserved.
-            
-              </footer>
-            
+            <!-- Responsive Menu - Start -->
+
+            <div>
+              <div id="responsiveMenu" class="responsive-menu">
+                <app-menu></app-menu>
+                <a class="close" (click)="closeMenu()">&times;</a>
+              </div>
             </div>
 
-          </div>
+            <!-- Responsive Menu - End -->
 
-
-          <!-- Responsive Menu - Start -->
-
-          <div>
-          <div id="responsiveMenu" class="responsive-menu">
-            <app-menu></app-menu>
-            <a class="close" (click)="closeMenu()">&times;</a>
           </div>
         </div>
-
-          <!-- Responsive Menu - End -->
-
-        </div>
-      </div>
       </div>
     </div>
 
   </div>
-  
-</div>
 
+</div>

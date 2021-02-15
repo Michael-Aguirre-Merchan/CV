@@ -15,7 +15,6 @@
 
     background-color: #171C2A;
     display: none;
-    /* border-radius: 50px; */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 30%);
     -webkit-transition: opacity 1s;
     transition: opacity 1s;
@@ -73,12 +72,23 @@
 
 }
 
-@keyframes myfirst { 
+  .footer {
 
-    0%   {background-color:red; left:0px; top:0px; display: flex;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:rgb(212, 0, 255); left:0px; top:0px; display: none;}
+    margin: 30px 0 0 0;
+    padding: 0 40px;
 
-}
+  }
+
+  .footer-container {
+
+    
+    background-color:#171C2A;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 91.6666666667%;
+    
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    
+  }
