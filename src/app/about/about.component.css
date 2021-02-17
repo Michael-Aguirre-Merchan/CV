@@ -15,8 +15,10 @@
 
     background-color: #171C2A;
     display: none;
-    /* border-radius: 50px; */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 30%);
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    opacity: 0;
 
 }
 
@@ -33,6 +35,13 @@
     display: none !important;
 
 } */
+
+.card-deck {
+
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+
+}
 
 .close-icon {
 
@@ -62,3 +71,24 @@
     background-color: transparent;
 
 }
+
+  .footer {
+
+    margin: 30px 0 0 0;
+    padding: 0 40px;
+
+  }
+
+  .footer-container {
+
+    
+    background-color:#171C2A;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 91.6666666667%;
+    
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    
+  }

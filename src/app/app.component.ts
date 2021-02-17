@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {NgxChessBoardService} from 'ngx-chess-board';
+import { Router } from '@angular/router';
+import { NgxChessBoardService } from 'ngx-chess-board';
 
 @Component({
   selector: 'app-root',
@@ -16,13 +17,13 @@ export class AppComponent {
     // var pos = element.getBoundingClientRect();
     // console.log(pos.top, pos.right, pos.bottom, pos.left);
 
-    var ab:any;
-    var ad:any;
+    var ab: any;
+    var ad: any;
 
     ab = document.getElementById("responsiveMenu")
     ad = document.getElementById("body")
-    
-    
+
+
     // ab.style.marginLeft = "250px";
     ad.style.backgroundColor = "rgba(0,0,0,0.5)";
     ad.style.marginLeft = "0";
@@ -32,14 +33,14 @@ export class AppComponent {
     // ab.style.margin = "0"
     // ab.style.top = pos.top+'px'
     // ab.style.borderRadius = "0" 
-    
+
   }
-  
+
   closeMenu() {
 
-    var ac:any;
+    var ac: any;
     var ae: any;
-    
+
     ac = document.getElementById("responsiveMenu")
     ae = document.getElementById("body")
 
@@ -47,12 +48,12 @@ export class AppComponent {
 
     ae.style.backgroundColor = "transparent";
     ae.style.marginLeft = "200px"
-    
-  } 
 
-  constructor(private ngxChessBoardService: NgxChessBoardService) { }
+  }
 
-  
+  constructor(private ngxChessBoardService: NgxChessBoardService, public router: Router) { }
+
+
 }
 
 

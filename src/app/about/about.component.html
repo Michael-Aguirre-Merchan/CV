@@ -3,30 +3,32 @@
     <div class="row justify-content-center">
 
         <h2 class="about-title">About</h2>
-    
+
         <div class="col-11 align-items-center">
-            
+
             <div *ngFor="let read of reads">
 
                 <div class="card mb-3 read-more-card" [id]=read.id>
                     <div class="card-body">
                         <div class="title-icon">
-                      <h5 class="card-title read-card-title justify-content-between">{{read.title}}</h5>
-                      <button (click)="moreCardCode(read)" class="close-button"><i class="close-icon bi bi-x"></i></button>
-                    </div>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title read-card-title justify-content-between">{{read.title}}</h5>
+                            <button (click)="moreCardCode(read)" class="close-button"><i
+                                    class="close-icon bi bi-x"></i></button>
+                        </div>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
 
             </div>
 
-            <div id="card-deck" class="row justify-content-between card-deck" >
+            <div id="card-deck" class="row justify-content-between card-deck">
 
-                <div class="col-xl-4 col-lg-6 col-md-12" *ngFor="let card of cards" >
+                <div class="col-xl-4 col-lg-6 col-md-12" *ngFor="let card of cards">
 
                     <div class="card">
 
-                        <div class="card-body">
+                        <div class="card-body" [id]=card.id name="element">
 
                             <h5 class="card-title">{{ card.title }}</h5>
 
@@ -37,16 +39,26 @@
                             <div class="read-button">
 
                                 <button (click)="cardCode(card)">Read More</button>
+                                <!-- <button (click)="animationTest(card)">Read More</button> -->
 
-                            </div> 
+                            </div>
 
                         </div>
 
-                      </div>
+                    </div>
 
                 </div>
 
             </div>
+        </div>
+
+        <div class="footer">
+
+            <footer class="footer-container" id="footer">
+
+                2021 All Rights Reserved.
+
+            </footer>
 
         </div>
 

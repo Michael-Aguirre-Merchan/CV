@@ -1,12 +1,24 @@
-<div class="container-fluid footer-fix">
+<div class="container-fluid footer-fix" data-ng-init="init()">
 
-    <div class="row justify-content-center">
+    <div id="board" class="row justify-content-center">
 
         <h2 class="contact-title">Play Chess</h2>
 
-        <div #divToMeasure class="col-7">
+        <div class="col-md-3">
 
-            <ngx-chess-board #board [size]="this.size" ></ngx-chess-board>
+            Player 1
+
+        </div>
+
+        <div class="col-md-6">
+
+            <ngx-chess-board class="board" [size]="size"></ngx-chess-board>
+
+        </div>
+
+        <div class="col-md-3">
+
+            Player 2
 
         </div>
 
