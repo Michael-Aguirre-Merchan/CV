@@ -1,39 +1,46 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-play',
   templateUrl: './play.component.html',
   styleUrls: ['./play.component.css']
 })
-export class PlayComponent 
-// implements AfterViewInit 
-    {
-
-
-  // @ViewChild('divToMeasure') divToMeasureElement!: ElementRef;
-
-   public size:any;
-
-  // ngAfterViewInit() {
-
-  //   let divToMeasureWidth = this.divToMeasureElement.nativeElement.offsetWidth;
-
-  //   console.log(divToMeasureWidth);
-
-  //   this.size = divToMeasureWidth
-
-  //   console.log(this.size)
-     
-  // }
-
-     
-  
-  
+export class PlayComponent implements OnInit {
   
 
-  constructor() { }
+ngOnInit(): number {
 
-  ngOnInit(): void {
+  let newBoardSize: number;
+  var screenUsed:number;
+
+  if (screen.width >= 1200) {
+
+    screenUsed = 0.37485
+    
+  } 
+  
+ if (screen.width < 1200 && screen.width >= 768) {
+
+    screenUsed = 0.45
+    
   }
 
+  else {
+
+    screenUsed = 0.7
+
+  }
+
+  newBoardSize = screen.width * screenUsed!;
+
+  console.log(newBoardSize);
+
+  return newBoardSize
+}
+
+
+    public size = this.ngOnInit()
+  
+  constructor () {}
+  
 }
