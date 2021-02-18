@@ -9,3 +9,10 @@
     display: none;
 
 }
+
+.board-container {
+
+    margin: auto;
+    width: fit-content;
+
+}

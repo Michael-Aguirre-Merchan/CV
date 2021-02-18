@@ -61,10 +61,17 @@ input[type=text], input[type=email], textarea, textarea:focus {
     border-color: #141B24;
 }
 
-.button{
+.button, .button:focus, .button:active {
 
     margin-left: auto;
     display: block;
+    background-color: white;
+    color: black;
+    border-color: transparent;
+
+    /* FIXME Outline when active*/
+    outline: none !important;
+    outline-color: transparent !important;
 
 }
 

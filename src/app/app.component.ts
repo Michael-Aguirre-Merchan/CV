@@ -24,7 +24,7 @@ export class AppComponent {
     ad = document.getElementById("body")
 
 
-    // ab.style.marginLeft = "250px";
+    ad.style.display = "block";
     ad.style.backgroundColor = "rgba(0,0,0,0.5)";
     ad.style.marginLeft = "0";
     ab.style.display = "block";
@@ -46,6 +46,7 @@ export class AppComponent {
 
     ac.style.display = "none";
 
+    ae.style.display = "none";
     ae.style.backgroundColor = "transparent";
     ae.style.marginLeft = "200px"
 

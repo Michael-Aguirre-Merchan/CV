@@ -9,6 +9,12 @@ export class ContactComponent implements OnInit {
 
   constructor() { }
 
+  submit() {
+
+    
+
+  }
+
   ngOnInit(): void {
   }
 

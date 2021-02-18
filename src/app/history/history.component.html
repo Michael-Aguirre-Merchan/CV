@@ -1,54 +1,58 @@
 <div class="container-fluid footer-fix">
 
-    <div class="row justify-content-around">
+  <div class="row justify-content-around">
 
-        <H1 class="contact-title">
+    <H1 class="contact-title">
 
-            Background
-            
-        </H1>
+      Background
 
-        <div class="col-md-6 justify-content-end">
+    </H1>
 
-            <h3 class="contact-title">
+    <div class="col-md-6 justify-content-end">
 
-                Work
+      <h3 class="contact-title">
+        Education
+      </h3>
 
-            </h3>
-
-            <ul class="list-unstyled lists">
-              <li class="media my-4" *ngFor="let work of works">
-                <hr>
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">{{work.title}}</h5>
-                  {{work.detail}}
-                </div>
-                <div class="align-self-center">
-                <img class="mr-3 media-image" src="../../assets/rec.png">
-                </div>
-              </li>
-            </ul>
-
-        </div>
-
-        <div class="col-md-6 justify-content-end">
-
-          <h3 class="contact-title">
-              Education
-          </h3>
-
-          <ul class="list-unstyled lists">
-            <li class="media my-4" *ngFor="let edu of edus">
-              <hr>
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">{{edu.title}}</h5>
-                {{edu.detail}}
-              </div>
-              <div class="align-self-center">
-              <img class="mr-3 media-image" src="../../assets/rec.png">
-              </div>
-            </li>
-          </ul>
-      </div>
+      <ul class="list-unstyled lists">
+        <li class="media my-4" *ngFor="let edu of edus">
+          <hr>
+          <div class="media-body">
+              <h4 class="p-2">{{edu.cert}}</h4>
+              <h5 class="p-2">{{edu.place}}</h5>
+            <h6>{{edu.date}}</h6>
+            {{edu.detail}}
+          </div>
+          <div class="align-self-center">
+            <img class="mr-3 media-image" src="../../assets/rec.png">
+          </div>
+        </li>
+      </ul>
     </div>
+
+    <div class="col-md-6 justify-content-end">
+
+      <h3 class="contact-title">
+
+        Work
+
+      </h3>
+
+      <ul class="list-unstyled lists">
+        <li class="media my-4" *ngFor="let work of works">
+          <hr>
+          <div class="media-body">
+              <h4 class="p-2">{{work.cert}}</h4>
+              <h5 class="p-2">{{work.place}}</h5>
+            <h6>{{work.date}}</h6>
+            {{work.detail}}
+          </div>
+          <div class="align-self-center">
+            <img class="mr-3 media-image" src="../../assets/rec.png">
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
 </div>

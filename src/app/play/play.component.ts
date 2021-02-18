@@ -25,11 +25,11 @@ ngOnInit(): number {
     
   }
 
-  else {
+ if (screen.width < 768) {
+   
+  screenUsed = 0.7
 
-    screenUsed = 0.7
-
-  }
+ } 
 
   newBoardSize = screen.width * screenUsed!;
 

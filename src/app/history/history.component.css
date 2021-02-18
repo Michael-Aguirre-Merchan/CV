@@ -8,8 +8,16 @@
 .lists {
 
   overflow:auto; 
-  height: 32rem; 
+  /* height: 60.4vh;  */
+  height: 32rem;
   position: relative;
+
+}
+
+.p-2 {
+  
+  padding-left: 0 !important;
+  padding-bottom: 0 !important;
 
 }
 
