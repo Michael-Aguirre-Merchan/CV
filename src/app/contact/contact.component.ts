@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-contact',
@@ -6,16 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  form: FormGroup;
 
-  constructor() { }
-
-  submit() {
-
-    
-
+  constructor(
+    public fb: FormBuilder,
+    private http: HttpClient
+  ) {
+    this.form = this.fb.group({
+      fullname: [''],
+      email: [''],
+      comment: ['']
+    })
   }
 
-  ngOnInit(): void {
+  ngOnInit() { }
+
+  submitForm() {
+    var formData: any = new FormData();
+    formData.append("fullname", this.form.get('fullname')!.value);
+    formData.append("email", this.form.get('email')!.value);
+    formData.append("comment", this.form.get('email')!.value);
+
+    this.http.post('https://formspree.io/f/mjvpdpgb', formData).subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    )
   }
 
 }

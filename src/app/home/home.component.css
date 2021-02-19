@@ -41,6 +41,24 @@
 
 }
 
+.animation-text {
+
+    display: flex;
+
+}
+
+.lead {
+
+    animation: color-change 2s infinite;
+
+}
+
+@keyframes color-change {
+    0% { color: #6c757d }
+    50% { color: rgb(255, 255, 255); }
+    100% { color: #6c757d; }
+  }
+
 @media only screen and (max-width: 991px) {
 
     .text-col {

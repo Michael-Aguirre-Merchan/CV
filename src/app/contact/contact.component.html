@@ -32,7 +32,8 @@
                     </div>
                     <div class="p-2 d-flex">
                         <div class="div-text">Skype: </div>
-                        <div class="div-text right-text"><a href="https://join.skype.com/invite/vdY7eMRtjRWM">live:michaelagirremerchan</a></div>
+                        <div class="div-text right-text"><a
+                                href="https://join.skype.com/invite/vdY7eMRtjRWM">live:michaelagirremerchan</a></div>
                     </div>
                     <!-- <div class="p-2 d-flex">
                         <div class="div-text">Country: </div>
@@ -41,12 +42,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- <div class="col-3">
-            <div class="contact-card">
-                3
-            </div>
-        </div> -->
     </div>
 
     <div class="row justify-content-center">
@@ -57,22 +52,23 @@
 
             <div class="form-card">
 
-                <form>
+                <form [formGroup]="form" (ngSubmit)="submitForm()">
 
-                    <div class="input-group form-margin">
+                    <div class="input-group form-margin form-group">
 
                         <div class="input-group-prepend">
 
                             <span class="input-group-text form-icon" id="inputGroupPrepend">
 
                                 <i class="bi bi-envelope-fill"></i>
-                                
+
                             </span>
 
                         </div>
 
-                        <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email"formControlName="Email">
-                    
+                        <input type="email" class="form-control" name="Email" aria-describedby="emailHelp"
+                            placeholder="Enter email" formControlName="email">
+
                     </div>
 
                     <div class="input-group form-margin">
@@ -86,25 +82,39 @@
                             </span>
 
                         </div>
-    
-                        <input type="text" class="form-control" name="Fullname" placeholder="Full Name" formControlName="Fullname">
-                    
+
+                        <input type="text" class="form-control" name="Fullname" placeholder="Full Name"
+                            formControlName="fullname">
+
                     </div>
 
                     <div class="form-group form-margin">
 
-                        <textarea rows="6" class="form-control" formControlName="Comment" placeholder="Comment" name="Comment"></textarea>
+                        <textarea rows="6" class="form-control" formControlName="comment" placeholder="Comment"
+                            name="Comment"></textarea>
 
                     </div>
 
-                    <button (onclick)="submit()" type="submit" class="btn btn-light button">Submit</button>
-                
-                </form>
+                    <button class="btn btn-light button">Submit</button>
 
+                </form>
+                <!-- <form [formGroup]="form" (ngSubmit)="submitForm()">
+                    <div class="form-group">
+                        <input type="file" (change)="uploadFile($event)">
+                    </div>
+            
+                    <div class="form-group input-group-lg">
+                        <input class="form-control" placeholder="Name" formControlName="name">
+                    </div>
+            
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-block btn-lg">Create</button>
+                    </div>
+                </form> -->
             </div>
 
         </div>
-        
+
     </div>
 
 </div>

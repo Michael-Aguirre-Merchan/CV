@@ -67080,11 +67080,9 @@ class BoardStateProvider {
 class CoordsProvider {
     constructor() {
         this.defaultXCoords = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-        this.reversedXCoords = ['h', 'g', 'f', 'e', 'd', 'c', 'b', 'a'];
         this.defaultYCoords = [8, 7, 6, 5, 4, 3, 2, 1];
-        this.reversedYCoords = [1, 2, 3, 4, 5, 6, 7, 8];
-        this.currentXCoords = this.defaultXCoords;
-        this.currentYCoords = this.defaultYCoords;
+        this.currentXCoords = [...this.defaultXCoords];
+        this.currentYCoords = [...this.defaultYCoords];
     }
     get xCoords() {
         return this.currentXCoords;
@@ -67093,15 +67091,15 @@ class CoordsProvider {
         return this.currentYCoords;
     }
     reverse() {
-        this.currentXCoords = this.reversedXCoords;
-        this.currentYCoords = this.reversedYCoords;
+        this.currentXCoords = this.currentXCoords.reverse();
+        this.currentYCoords = this.currentYCoords.reverse();
     }
     reset() {
         this.init();
     }
     init() {
-        this.currentXCoords = this.defaultXCoords;
-        this.currentYCoords = this.defaultYCoords;
+        this.currentXCoords = [...this.defaultXCoords];
+        this.currentYCoords = [...this.defaultYCoords];
     }
 }
 
@@ -67896,6 +67894,7 @@ class NgxChessBoardComponent {
             this.boardLoader.loadFEN(fen);
             this.board.possibleCaptures = [];
             this.board.possibleMoves = [];
+            this.coords.reset();
         }
         catch (exception) {
             this.boardLoader.addPieces();
@@ -68286,7 +68285,7 @@ PiecePromotionModalComponent.propDecorators = {
         type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
         args: [{
                 selector: 'app-piece-promotion-modal',
-                template: "<div #myModal class=\"container\">\n    <div class=\"wrapper\">\n        <div class=\"content\">\n            <div class=\"piece-wrapper\">\n                <div class=\"piece\" (click)=\"changeSelection(1)\">&#x265B;</div>\n                <div class=\"piece\" (click)=\"changeSelection(2)\">&#x265C;</div>\n                <div class=\"piece\" (click)=\"changeSelection(3)\">&#x265D;</div>\n                <div class=\"piece\" (click)=\"changeSelection(4)\">&#x265E;</div>\n            </div>\n        </div>\n    </div>\n</div>\n",
+                template: "<div #myModal class=\"container\">\r\n    <div class=\"wrapper\">\r\n        <div class=\"content\">\r\n            <div class=\"piece-wrapper\">\r\n                <div class=\"piece\" (click)=\"changeSelection(1)\">&#x265B;</div>\r\n                <div class=\"piece\" (click)=\"changeSelection(2)\">&#x265C;</div>\r\n                <div class=\"piece\" (click)=\"changeSelection(3)\">&#x265D;</div>\r\n                <div class=\"piece\" (click)=\"changeSelection(4)\">&#x265E;</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n",
                 styles: [".container{background-color:rgba(0,0,0,.4);color:#000;display:none;overflow:auto;position:absolute;top:0;z-index:1}.container,.wrapper{height:100%;width:100%}.content,.wrapper{position:relative}.content{background-color:#fefefe;border:1px solid #888;font-size:100%;height:40%;margin:auto;padding:10px;top:30%;width:90%}.piece{cursor:pointer;display:inline-block;font-size:5rem;height:100%;width:25%}.piece:hover{background-color:#ccc;border-radius:5px}.piece-wrapper{height:80%;width:100%}#close-button{background-color:#4caf50;border:none;border-radius:4px;color:#fff;display:inline-block;padding-left:5px;padding-right:5px;text-align:center;text-decoration:none}.selected{border:2px solid #00b919;border-radius:4px;box-sizing:border-box}"]
             }]
     }], function () { return []; }, { modal: [{
