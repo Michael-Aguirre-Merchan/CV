@@ -1,14 +1,51 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxChessBoardService } from 'ngx-chess-board';
+
+declare var $: any;
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'chess';
+
+  constructor(private ngxChessBoardService: NgxChessBoardService, public router: Router) { }
+
+  loaded = true
+
+  ngOnInit(): void {
+
+    var url = window.document.location.pathname
+
+    if (url == "/") {
+
+      this.loaded = false
+
+      console.log()
+
+      var body: any
+
+      body = document.getElementById("body")
+
+      body.style.display = "none"
+
+      setTimeout(() => {
+
+        this.loaded = true
+
+        console.log(body);
+
+        body.style.display = "block"
+
+
+      }, 5050);
+    }
+
+  }
 
   openMenu() {
 
@@ -51,8 +88,6 @@ export class AppComponent {
     ae.style.marginLeft = "200px"
 
   }
-
-  constructor(private ngxChessBoardService: NgxChessBoardService, public router: Router) { }
 
 
 }

@@ -11,6 +11,8 @@ import { HistoryComponent } from './history/history.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './loading/loading.component';
+import { FileSaverModule } from 'ngx-filesaver';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     PlayComponent,
     AboutComponent,
     HistoryComponent,
-    ContactComponent
+    ContactComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    FileSaverModule,
     HttpClientModule,
     ReactiveFormsModule,
     NgxChessBoardModule.forRoot()

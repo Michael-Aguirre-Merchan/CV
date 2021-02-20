@@ -53,6 +53,12 @@
 
 }
 
+.fix-space {
+
+    color: transparent;
+
+}
+
 @keyframes color-change {
     0% { color: #6c757d }
     50% { color: rgb(255, 255, 255); }

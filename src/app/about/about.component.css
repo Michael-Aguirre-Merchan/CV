@@ -22,6 +22,15 @@
 
 }
 
+.card-text {
+
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+
+}
+
 .read-button {
 
     float: right;

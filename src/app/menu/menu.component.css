@@ -1,3 +1,11 @@
+ .cv, .cv:focus, .cv:active {
+
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+
+ }
+ 
  .menu-card {
 
     background-color: #17202A;
