@@ -22,7 +22,13 @@
 
 }
 
-.card-text {
+.small-card-full{
+
+    height: 294px;
+
+}
+
+.card-small {
 
     display: -webkit-box;
     -webkit-line-clamp: 7;
@@ -33,7 +39,10 @@
 
 .read-button {
 
-    float: right;
+    /* float: right; */
+    position: absolute;
+    bottom: 0.7rem;
+    right: 0.7rem;
 
 }
 

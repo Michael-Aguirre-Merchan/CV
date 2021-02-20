@@ -17,7 +17,7 @@ export class MenuComponent {
       observe: 'response',
       responseType: 'blob'
     }).subscribe(res => {
-      this.fileSaverService.save(res.body!, "Michael Aguirre - CV");
+      this.fileSaverService.save(res.body!, "Michael Aguirre - CV.pdf");
     });
     return;
   }

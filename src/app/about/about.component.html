@@ -6,17 +6,16 @@
 
         <div class="col-11 align-items-center">
 
-            <div *ngFor="let read of reads">
+            <div *ngFor="let card of cards">
 
-                <div class="card mb-3 read-more-card" [id]=read.id>
+                <div class="card mb-3 read-more-card" [id]=card.id>
                     <div class="card-body">
                         <div class="title-icon">
-                            <h5 class="card-title read-card-title justify-content-between">{{read.title}}</h5>
-                            <button class="btn btn-light" (click)="moreCardCode(read)" class="close-button"><i
+                            <h5 class="card-title read-card-title justify-content-between">{{card.title}}</h5>
+                            <button class="btn btn-light" (click)="moreCardCode(card)" class="close-button"><i
                                     class="close-icon bi bi-x"></i></button>
                         </div>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">{{card.text}}</p>
                     </div>
                 </div>
 
@@ -26,13 +25,13 @@
 
                 <div class="col-xl-4 col-lg-6 col-md-12" *ngFor="let card of cards">
 
-                    <div class="card">
+                    <div class="card small-card-full">
 
                         <div class="card-body" [id]=card.id name="element">
 
                             <h5 class="card-title">{{ card.title }}</h5>
 
-                            <p class="card-text">{{ card.text }}</p>
+                            <p class="card-text card-small">{{ card.text }}</p>
 
                             <br>
 
