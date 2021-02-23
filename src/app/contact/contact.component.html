@@ -50,6 +50,14 @@
 
         <div class="col-12 col-md-11">
 
+            <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                There has been an error. Please, try again.
+              </div>
+
+              <div *ngIf="successMessage" class="alert alert-info" role="alert">
+                Your form was uploaded successfully. I'll contact you as soon as possible.
+              </div>
+
             <div class="form-card">
 
                 <form [formGroup]="form" (ngSubmit)="submitForm()">

@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 })
 export class ContactComponent implements OnInit {
   form: FormGroup;
+  errorMessage = false;
+  successMessage = false; 
 
   constructor(
     public fb: FormBuilder,
@@ -24,15 +26,19 @@ export class ContactComponent implements OnInit {
   ngOnInit() { }
 
   submitForm() {
+    this.errorMessage = false;
+    this.successMessage = false; 
     var formData: any = new FormData();
     formData.append("fullname", this.form.get('fullname')!.value);
     formData.append("email", this.form.get('email')!.value);
     formData.append("comment", this.form.get('email')!.value);
 
     this.http.post('https://formspree.io/f/mjvpdpgb', formData).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
-    )
-  }
+      
+    response => this.successMessage = true,
 
+    error => this.errorMessage = true,
+    )
+
+  }
 }
