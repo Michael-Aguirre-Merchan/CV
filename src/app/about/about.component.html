@@ -1,13 +1,10 @@
 <div class="container-fluid footer-fix">
 
     <div class="row justify-content-center">
-
         <h2 class="about-title">About</h2>
-
         <div class="col-11 align-items-center">
 
             <div *ngFor="let card of cards">
-
                 <div class="card mb-3 read-more-card" [id]=card.id>
                     <div class="card-body">
                         <div class="title-icon">
@@ -18,48 +15,30 @@
                         <p class="card-text">{{card.text}}</p>
                     </div>
                 </div>
-
             </div>
 
-            <div id="card-deck" class="row justify-content-around card-deck">
-
+            <div id="card-deck" class="row justify-content-start card-deck">
                 <div class="col-xl-4 col-lg-6 col-md-12" *ngFor="let card of cards">
-
                     <div class="card small-card-full">
-
                         <div class="card-body" [id]=card.id name="element">
-
                             <h5 class="card-title">{{ card.title }}</h5>
-
                             <p class="card-text card-small">{{ card.text }}</p>
-
                             <br>
-
                             <div class="read-button">
-
                                 <button class="btn btn-light" (click)="cardCode(card)">Read More</button>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
+
         </div>
 
         <div class="footer">
-
             <footer class="footer-container" id="footer">
-
                 2021 All Rights Reserved.
-
             </footer>
-
         </div>
 
     </div>
-
 </div>

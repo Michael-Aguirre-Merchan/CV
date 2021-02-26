@@ -9,11 +9,11 @@ export class AboutComponent implements OnInit {
 
   cards = [
     { id: 1, title: 'About Me', text: 'Motivated second semester college student with an exemplary academic record and an aspiration to advance in the software industry. I have an innate capacity for leadership and strategic thinking.In addition, during my studies and extracurricular activities I have developed other skills, which make me an excellent asset to your company.' },
+    // { id: 4, title: 'Web Development', text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 4' },
+    { id: 6, title: 'Other Participations', text: 'UdeA Biotechnology Course, Journalism Team Leader, Mathematics Group Leader Tutor, Organizer and Model United Nations (UN) President, 3 participations (2 times winner) math Olympics, Philosophy Forum Delegate, Children with Cancer Foundation Volunteer' },
+    { id: 5, title: 'Other Certifications', text: 'English Certification from Colombo Americano, TOEFL exam certification, Angular: From cero to expert, Google mobile app development certification' },
     { id: 2, title: 'Skills', text: 'English, Japanese, Html, Wordpress, Angular, Adobe XD' },
     { id: 3, title: 'Interests', text: 'Travel, Read, Program Write' },
-    // { id: 4, title: 'Web Development', text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 4' },
-    { id: 5, title: 'Other Certifications', text: 'English Certification from Colombo Americano, TOEFL exam certification, Angular: From cero to expert, Google mobile app development certification' },
-    { id: 6, title: 'Other Participations', text: 'UdeA Biotechnology Course, Journalism Team Leader, Mathematics Group Leader Tutor, Organizer and Model United Nations (UN) President, 3 participations (2 times winner) math Olympics, Philosophy Forum Delegate, Children with Cancer Foundation Volunteer' }
   ];
 
   constructor() {
