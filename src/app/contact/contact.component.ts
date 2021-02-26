@@ -31,7 +31,7 @@ export class ContactComponent implements OnInit {
     var formData: any = new FormData();
     formData.append("fullname", this.form.get('fullname')!.value);
     formData.append("email", this.form.get('email')!.value);
-    formData.append("comment", this.form.get('email')!.value);
+    formData.append("comment", this.form.get('comment')!.value);
 
     this.http.post('https://formspree.io/f/mjvpdpgb', formData).subscribe(
       
