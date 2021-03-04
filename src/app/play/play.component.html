@@ -4,26 +4,31 @@
 
         <h2 class="contact-title">Play Chess</h2>
 
-        <div class="col-md-3">
+        <div class="col-10 col-md-3 players" id="player-1">
 
-            Player 1
+            White
 
         </div>
 
         <div class="col-md-6">
 
             <div class="board-container">
-            <ngx-chess-board class="board" [size]="size"></ngx-chess-board>
+            <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
             </div>
 
         </div>
 
-        <div class="col-md-3">
+        <div class="col-10 col-md-3 players" id="player-2">
 
-            Player 2
+            Black
+            <!-- <button class="control" (click)="toggle()">
+                <span class="pause-icon" *ngIf="!paused"></span>
+                <span class="play-icon" *ngIf="paused"></span>
+              </button> -->
 
         </div>
 
     </div>
 
+    
 </div>

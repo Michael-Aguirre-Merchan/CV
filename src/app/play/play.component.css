@@ -12,7 +12,73 @@
 
 .board-container {
 
-    margin: auto;
+    margin: 0px auto 0px auto;
     width: fit-content;
+
+}
+
+.players {
+
+    background-color: rgba(26, 35, 46, 70%);
+
+}
+
+:host {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  p {
+    font-family: Lato;
+  }
+  
+  .control {
+    border-radius: 50%;
+    border: 2px solid #bc70ea;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    opacity: 0.4;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .control:hover {
+    opacity: 1;
+  }
+  
+  .play-icon {
+    height: 40px;
+    width: 50px;
+    position: relative;
+    left: 10px;
+    border-right: none;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 50px solid #a25be2;
+    box-sizing: border-box;
+  }
+  
+  
+  .pause-icon {
+    height: 50px;
+    width: 30px;
+    box-sizing: border-box;
+    border-left: 10px solid #a25be2;
+    border-right: 10px solid #a25be2;
+  }
+  
+
+@media only screen and (max-width: 768px) {
+
+    .board-container {
+        margin: 30px auto 30px auto;
+    }
 
 }

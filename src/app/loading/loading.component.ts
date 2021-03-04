@@ -80,7 +80,7 @@ export class LoadingComponent implements OnInit {
         timer(animationTime, days);
         deadlineAnimation();
 
-        console.log('begin interval', animationTime * 1000);
+        // console.log('begin interval', animationTime * 1000);
 
       }, animationTime * 1000);
 

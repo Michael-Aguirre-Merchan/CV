@@ -25,8 +25,6 @@ export class AppComponent implements OnInit {
 
       this.loaded = false
 
-      console.log()
-
       var body: any
 
       body = document.getElementById("body")
@@ -36,8 +34,6 @@ export class AppComponent implements OnInit {
       setTimeout(() => {
 
         this.loaded = true
-
-        console.log(body);
 
         body.style.display = "block"
 
