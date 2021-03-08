@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxChessBoardComponent, MoveChange } from 'ngx-chess-board';
 import { PausableObservable, pausable } from 'rxjs-pausable';
-import { Subject, interval } from 'rxjs';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-play',
@@ -14,7 +14,6 @@ export class PlayComponent implements OnInit {
 
   public fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
   paused = true;
-  pausable!: PausableObservable<number>;
 
   ngOnInit(): number {
 
@@ -41,8 +40,6 @@ export class PlayComponent implements OnInit {
 
     newBoardSize = (screen.width * screenUsed!) - 30;
 
-    // console.log(newBoardSize);
-
     setTimeout(() => {
 
       var P1 = document.getElementById("player-1")
@@ -53,38 +50,36 @@ export class PlayComponent implements OnInit {
 
     }, 1);
 
-    // this.shoot();
-    this.pausable = interval(800)
-      .pipe(pausable()) as PausableObservable<number>;
-    this.pausable.subscribe(this.shoot.bind(this));
-    this.pausable.pause();
+    // this.pausable = interval(800).pipe(pausable()) as PausableObservable<number>;
+    // this.pausable.subscribe(this.shoot.bind(this));
+    // this.pausable.pause();
 
     return newBoardSize
 
   }
 
-  toggle() {
-    if (this.paused) {
-      this.pausable.resume();
-    } else {
-      this.pausable.pause();
-    }
-    this.paused = !this.paused;
-  }
+  // pausable!: PausableObservable<number>;
 
-  shoot() {
+  // toggle() {
+  //   if (this.paused) {
+  //     this.pausable.resume();
+  //   } else {
+  //     this.pausable.pause();
+  //   }
+  //   this.paused = !this.paused;
+  // }
 
-    this.confetti({
-      angle: this.random(120, 170),
-      spread: this.random(30, 50),
-      // particleCount: this.random(40, 50),`
-      particleCount: 250,
-      origin: {
-        y: 0.6
-      }
-    });
-
-  }
+  // shoot() {
+  //   this.confetti({
+  //     angle: this.random(120, 170),
+  //     spread: this.random(30, 50),
+  //     // particleCount: this.random(40, 50),`
+  //     particleCount: 250,
+  //     origin: {
+  //       y: 0.6
+  //     }
+  //   });
+  // }
 
   random(min: number, max: number) {
     return Math.random() * (max - min) + min;
@@ -98,7 +93,7 @@ export class PlayComponent implements OnInit {
 
   public moveCallback(move: MoveChange): void {
     this.fen = this.boardManager.getFEN();
-    console.log(this.fen);
+    // console.log(this.fen);
     if (move.x === true) {
 
       if (move.color === 'black') {
@@ -112,8 +107,7 @@ export class PlayComponent implements OnInit {
             y: 0.6
           }
         });
-  
-        
+
       }
 
       if (move.color === 'white') {
@@ -127,9 +121,9 @@ export class PlayComponent implements OnInit {
             y: 0.6
           }
         });
-       
+
       }
-      
+
     }
 
   }
