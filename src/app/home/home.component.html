@@ -1,71 +1,122 @@
 <div class="container-fluid home-first">
 
-    <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid">
 
-        <div class="jumbo-back-color">
+    <div class="jumbo-back-color">
 
-            <div class="row justify-content-center">
+      <div class="row justify-content-center">
 
-                <div class="col-10 fix-text">
+        <div class="col-10 fix-text">
 
-                    <h1 class="display-4">
-                        <div class="animation-text">
-                            <a class="typewrite" data-period="1000"
-                                data-type='[ "Hello there.", "I am Michael.", "I Love to Develop." ]'>
-                                <span class="wrap"></span>
-                            </a>
-                            <p class="fix-space">.</p>
-                        </div>
-                    </h1>
-
-                    <br>
-
-                    <p class="lead">Angular | HTML | CSS | SCSS | Desarrollo de Software</p>
-
-                </div>
-
+          <h1 class="display-4">
+            <div class="animation-text">
+              <a class="typewrite" data-period="1000"
+                data-type='[ "Hello there.", "I am Michael.", "I Love to Develop." ]'>
+                <span class="wrap"></span>
+              </a>
+              <p class="fix-space">.</p>
             </div>
+          </h1>
+
+          <br>
+
+          <p class="lead">Angular | HTML | CSS | SCSS | Desarrollo de Software</p>
 
         </div>
 
+      </div>
+
     </div>
+
+  </div>
 
 </div>
 
 <div class="container-fluid footer-fix">
 
-    <div class="row justify-content-around">
+  <div class="row justify-content-around">
 
-        <div class="col-lg-6 align-self-center ">
+    <div class="col-lg-6 align-self-center ">
 
-            <!-- <div class="img-div">
+      <!-- <div class="img-div">
                 <img class="test-img" src="../../assets/Image 1.png">
             </div> -->
-            <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
-        </div>
-
-        <div class="col-10 col-lg-6  text-col">
-
-            
-            <div class="d-flex align-items-center" style="height: 100%;">
-                <button (click)="reset()">Reset</button>
-                <p> I am passionate about video games and more about strategy. That's why I decided to use my knowledge
-                    in software development to create a game (obviously, this is a work in progress, there are always
-                    things that can be improved and perfected).<br><br>
-                    Why chess? I think this game has qualities that help you forget the stress of hectic everyday life
-                    and be an admirable activity that combines mathematical precision with intuition.
-                    If you've played chess before, you know that the most challenging thing is maintaining constant
-                    concentration. On the contrary, it is your first time; I could summarize that chess is a game for
-                    two players on a board with 32 pieces (16 for each player) of six types. Each piece moves
-                    differently. The game's object is to checkmate, that is, to threaten the opponent's king with
-                    capture until it is unavoidable.<br><br>
-                    I hope I can capture the attention of everyone who visits this website and helps a little to create
-                    a distraction from the daily routine.<br><br>
-                    "One doesn't have to play well; it's enough to play better than your opponent." – Siegbert Tarrasch
-                </p>
-            </div>
-        </div>
-
+      <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
     </div>
+
+    <div class="col-10 col-lg-6  text-col">
+
+
+      <div class="d-flex align-items-center" style="height: 100%;">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                <h5 class="accordion-tittle">The Chess Board</h5>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                You are black.<br><br>
+                Your Mission is to fisnish the game in 3 moves or less<br><br>
+                If you are going the right way, white will move. If not, here you have some help:
+                <br><br>
+                <div class="row justify-content-around">
+                <div class="col-4">
+                <button class="accordion-buttons" (click)="reset()">Reset</button>
+                </div>
+                <div class="col-4">
+                <button class="accordion-buttons" (click)="undo()">Undo</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <h5 class="accordion-tittle">A little about me</h5>
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                I am passionate about video games and more about strategy. That's why I decided to use my knowledge
+                in software development to create a game (obviously, this is a work in progress, there are always
+                things that can be improved and perfected).<br><br>
+                I hope I can capture the attention of everyone who visits this website and helps a little to create
+                a distraction from the daily routine.<br><br>
+                "One doesn't have to play well; it's enough to play better than your opponent." – Siegbert Tarrasch
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <h5 class="accordion-tittle">Why Chess?</h5>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Why chess? I think this game has qualities that help you forget the stress of hectic everyday life
+                and be an admirable activity that combines mathematical precision with intuition.
+                If you've played chess before, you know that the most challenging thing is maintaining constant
+                concentration. On the contrary, it is your first time; I could summarize that chess is a game for
+                two players on a board with 32 pieces (16 for each player) of six types. Each piece moves
+                differently. The game's object is to checkmate, that is, to threaten the opponent's king with
+                capture until it is unavoidable.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 </div>

@@ -66,6 +66,11 @@ export class HomeComponent implements OnInit {
 
   }
 
+  undo() {
+    this.boardManager.undo();
+    this.fen = this.boardManager.getFEN();
+}
+
   public moveCallback(move: MoveChange): void {
     this.fen = this.boardManager.getFEN();
 
@@ -146,5 +151,5 @@ export class HomeComponent implements OnInit {
 
   public size = this.ngOnInit()
 
-
 }
+
