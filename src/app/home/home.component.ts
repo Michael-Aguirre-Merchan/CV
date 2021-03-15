@@ -45,12 +45,6 @@ export class HomeComponent implements OnInit {
       this.boardManager.setFEN('5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 40');
     }, 2);
 
-    if (newBoardSize < 400) {
-
-      newBoardSize = 400
-
-    }
-
     return newBoardSize
 
   }

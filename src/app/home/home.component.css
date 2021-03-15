@@ -122,6 +122,12 @@
 
 }
 
+.col-lg-6{
+
+    width: fit-content;
+
+}
+
 @keyframes color-change {
     0% { color: #6c757d }
     50% { color: rgb(255, 255, 255); }
@@ -133,6 +139,16 @@
     .text-col {
 
         margin-top: 30px;
+
+    }
+
+}
+
+@media only screen and (max-width: 628px) {
+
+    .home-first {
+
+        padding: 30px;
 
     }
 
