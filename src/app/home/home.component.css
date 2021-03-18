@@ -9,6 +9,12 @@
 
 }
 
+.align-items-center {
+
+    height: 100%;
+
+}
+
 .jumbo-back-color {
 
     background-color: rgba(30, 41, 52, 86%);

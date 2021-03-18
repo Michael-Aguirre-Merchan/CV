@@ -11,7 +11,7 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'chess';
+  title = 'Michael Aguirre Merchan CV';
 
   constructor(private ngxChessBoardService: NgxChessBoardService, public router: Router) { }
 
