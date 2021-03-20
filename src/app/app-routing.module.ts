@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'background', component: HistoryComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '', component: HomeComponent },
+  { path: 'documentation', loadChildren: () => import('./documentation/documentation.module').then(m => m.DocumentationModule) },
+  { path: '', component: HomeComponent }, 
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 
 ];
