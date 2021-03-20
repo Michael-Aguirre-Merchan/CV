@@ -1,9 +1,194 @@
 <div class="container-fluid footer-fix">
 
     <div class="row justify-content-center">
-        
-        <p>configuration works!</p>
 
-        </div>
+        <h2 class="contact-title">CV</h2>
 
+        <div class="col-10">
+
+            <h3>Part 3: App configuration</h3>
+            <br>
+            Before anything else, we need to make sure the module of our app is completely configured, so we don’t get
+            any problems or error during coding.We will start by installing all the required packages.
+            <br><br>
+            <h5><li>Bootstrap:</li></h5>
+            <br>
+            Since it is going to be the most used package through our app, we will start by installing bootstrap
+            <br><br>
+            Run the next command inside the project folder:
+            <br><br>
+            <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+            <div id="codebox">
+                <code>
+            npm install bootstrap@next
+                </code>
+            </div>
+            <br>
+            This will install bootstrap but, to make sure everything works fine, go to the style.css file and, on the
+            top of the file, paste the following code:
+            <br><br>
+            <div class="codeheader" id="codeheader_css">style.css</div>
+            <div id="codebox">
+                <code>
+            @import "~bootstrap/dist/css/bootstrap.css";
+            <br>
+            @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+                </code>
+            </div>
+            <br>
+            <div class="center"><img src="../../../../assets/doc/cv/config/c1.png"></div>
+            <br><br>
+            <h5><li>Chess Board:</li></h5>
+            <br>
+            This is just in case you want to use the same chess game that's on the example app.
+            <br><br>
+            Run the next commands inside the project folder:
+            <br><br>
+            <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+            <div id="codebox">
+                <code>
+            ng add @angular/material
+            <br>
+            npm install ngx-chess-board
+                </code>
+            </div>
+            <br>
+            This will install the chess board but is not going to implement it, for that, go to the app.module.ts file
+            and import it like
+            this:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app.module.ts</div>
+            <div id="codebox">
+                <code>
+            import {{ '{' }} NgxChessBoardModule } from "ngx-chess-board";
+                </code>
+            </div>
+            <br>
+            Now, add it inside the import list:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app.module.ts</div>
+            <div id="codebox">
+                <code>
+            NgxChessBoardModule.forRoot()
+                </code>
+            </div>
+            <br>
+            <div class="center"><img src="../../../../assets/doc/cv/config/c2.png"></div>
+            <br><br>
+            And lastly, we need to import it to the app.component.ts and use it on the constructor:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app.module.ts</div>
+            <div id="codebox">
+                <code>
+            import {{ '{' }} NgxChessBoardService } from 'ngx-chess-board';
+            <br>
+            constructor ( private ngxChessBoardService: NgxChessBoardService )
+                </code>
+            </div>
+            <br>
+            <div class="center"><img src="../../../../assets/doc/cv/config/c3.png"></div>
+            <br><br>
+            <h5><li>FileSaver:</li></h5>
+            <br>
+            This will allow us to download files directly from our app.
+            <br><br>
+            Run the next command inside the project folder:
+            <br><br>
+            <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+            <div id="codebox">
+                <code>
+            npm install file-saver ngx-filesaver –save
+            <br>
+            npm install @types/file-saver
+                </code>
+            </div>
+            <br>
+            And import it inside the app.module.ts:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app.module.ts</div>
+            <div id="codebox">
+                <code>
+            import {{ '{' }} FileSaverModule } from 'ngx-filesaver';
+            <br><br>
+            (...)
+            <br><br>
+            imports: [FileSaverModule,]
+            </code>
+            </div>
+            <br>
+            <div class="center"><img src="../../../../assets/doc/cv/config/c4.png"></div>
+            <br><br>
+            <h5><li>Local Imports:</li></h5>
+            <br>
+            The last packages we need are already on our app, we just need to import them inside our
+            angular app:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app.module.ts</div>
+            <div id="codebox">
+                <code>
+            import {{ '{' }} FormsModule, ReactiveFormsModule } from '@angular/forms';
+            <br>
+            import {{ '{' }} HttpClientModule } from '@angular/common/http';
+            <br>
+            (...)
+            <br>
+            imports: [FormsModule,HttpClientModule,ReactiveFormsModule,]
+                </code>
+            </div>
+            <br>
+            <div class="center"><img src="../../../../assets/doc/cv/config/c5.png"></div>
+            <br><br>
+            <h5><li>Routes:</li></h5>
+            <br>
+            The last part of the configuration is to set the routes for our components. Go to the
+            app-routing.module.ts and import all the components except loading:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app-routing.module.ts</div>
+            <div id="codebox">
+                <code>
+            import {{ '{' }} AboutComponent } from './about/about.component';
+            <br>
+            import {{ '{' }} ContactComponent } from './contact/contact.component';
+            <br>
+            import {{ '{' }} BackgroundComponent } from './background/background.component';
+            <br>
+            import {{ '{' }} HomeComponent } from './home/home.component';
+            <br>
+            import {{ '{' }} PlayComponent } from './play/play.component';
+            </code>
+            </div>
+            <br>
+            And set up all the router paths:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app-routing.module.ts</div>
+            <div id="codebox">          
+<pre><code>const routes: Routes = [ 
+    {{ '{' }} path: 'home', component: HomeComponent },
+    {{ '{' }} path: 'play', component: PlayComponent },
+    {{ '{' }} path: 'about', component: AboutComponent },
+    {{ '{' }} path: 'background', component: HistoryComponent },
+    {{ '{' }} path: 'contact', component: ContactComponent },
+    {{ '{' }} path: '', component: HomeComponent }
+    {{ '{' }} path: '**', redirectTo: '/home', pathMatch: 'full' }
+];</code></pre>
+            </div>
+            <br>
+            <div class="center"><img src="../../../../assets/doc/cv/config/c6.png"></div>
+            <br><br>
+            Lastly, go to the app.component.ts and add the routes to the constructor:
+            <br><br>
+            <div class="codeheader" id="codeheader_ts">app.component.ts</div>
+            <div id="codebox">
+            <code>
+            import {{ '{' }} Router } from '@angular/router';
+            <br>
+            constructor(private ngxChessBoardService: NgxChessBoardService, public router: Router) {{ '{' }}}
+            </code>
+            </div>
+            <br>
+            <div class="center"><img src="../../../../assets/doc/cv/config/c7.png"></div>
+            <br><br>
+            Congrats! You have successfully configured your angular app.
         </div>
+    </div>
+</div>

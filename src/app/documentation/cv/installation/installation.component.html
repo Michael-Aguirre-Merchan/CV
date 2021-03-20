@@ -1,9 +1,240 @@
 <div class="container-fluid footer-fix">
 
-    <div class="row justify-content-center">
-        
-        <p>installation works!</p>
+        <div class="row justify-content-center">
+
+                <h2 class="contact-title">CV</h2>
+
+                <div class="col-10">
+
+                        <h3>Part 2: Creation and deployment.</h3>
+
+                        <br>
+                        The first thing you have to do is make sure you have angular installed on your computer, if not,
+                        please read the angular official site and guide:
+                        <a href="https://angular.io/guide/setup-local">https://angular.io/guide/setup-local</a>
+                        <br><br>
+                        Having angular already installed, open the command prompt ang go to the folder you want to
+                        create your angular project and run the next command:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+                        <div id="codebox">
+                                <code>
+                                        ng new <span class="replace">[App name]</span>
+                                </code>
+                        </div>
+                        <br>
+                        After it finished, you’ll have your own angular project to work with.The next step is to create
+                        the components I listed above, for that run each one of the commands I’ll list one by one:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+                        <div id="codebox">
+                                <code>
+                                        cd <span class="replace">[Appname]</span>
+                                        <br><br>
+                                        ng g c home
+                                        <br><br>
+                                        ng g c play
+                                        <br><br>
+                                        ng g c about
+                                        <br><br>
+                                        ng g c background
+                                        <br><br>
+                                        ng g c contact
+                                        <br><br>
+                                        ng g c menu
+                                        <br><br>
+                                        ng g c loading
+                                        <br><br>
+                                        ng serve --open
+                                </code>
+                        </div>
+                        <br>
+                        In case you did everything right, you should now be on your browser on the default angular
+                        landing. Congrats! You have now the base to make an awesome angular app.
+                        <br><br>
+                        The next step is to upload your app to an AWS storage, where we are going to be able to see our
+                        app online from our local files.In this version I’ll only be explaining how to upload the local
+                        files, be tune for the next version of this guide where I’ll be explaining how to use a git
+                        repository to publish your app.
+                        <br><br>
+                        Now, for the deployment we need to create a new account on <a
+                                href="https://aws.amazon.com/console/">https://aws.amazon.com/console/</a>. AWS offers a
+                        lot of free services; you can check it out. Inour case, we need S3.
+                        <br><br>
+                        Once you get past the registration, on the services’ navigation menu, search for the S3 title,
+                        under it, you’ll find “Storage option”.
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i1.png"></div>
+                        <br><br>
+                        The first thing we need to do is to create a bucket name but be careful, this name needs to be
+                        unique and chosen wisely as it will appear on your website URL.
+                        <br><br>
+                        The region selection is pretty simple, just select the closest region to you, so the server will
+                        be able to load the website faster.
+                        <br><br>
+                        Click on “Create Bucket” at the bottom and that's it, you now have your S3 bucket. You should
+                        see something like this on your S3 dashboard:
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i2.png"></div>
+                        <br><br>
+                        If everything is correct, try going to your bucket just to check everything is alright, the URL
+                        will be:
+                        <br><br>
+                        <div class="center"><b><span class="replace">(bucket name)</span>.s3-website.<span
+                                                class="replace">(time zone name)</span>.amazonaws.com</b></div>
+                        <br>
+                        You can find your time zone name on the bucket list, on the region description. In my case, it
+                        should be:
+                        <br><br>
+                        <div class="center"><b><span class="replace">documentation-cv</span>.s3-website.<span
+                                                class="replace">us-west-1</span>.amazonaws.com</b></div>
+                        <br>
+                        Assuming that everything is correct, you should be now seen a website like this:
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i3.png"></div>
+                        <br><br>
+                        Congrats! You have created your bucket correctly.      
+                        <br><br>
+                        This error is due to the fact that we do not have access to the bucket.
+                        <br><br>
+                        Now, to configure our bucket to be accessible, follow the next guide:
+                        <br><br>
+                        Open your bucket by clicking on its name, go to the “Properties”tab, go to the button and click
+                        on the “Edit” button in the “Static Web Hosting” section.
+                        <br><br>
+                        Inside it, enable the static webhosting and leave everything else like this:
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i4.png"></div>
+                        <br><br>
+                        Go to the “Permissions” tab and press the “Edit” button in the “Block public access” section.
+                        Uncheck the “Block all public access” and just leave the first and second box checked:
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i5.png"></div>
+                        <br><br>
+                        Save changes and go to the “Bucket Policy” section and click on “Edit”. Here we need to grant
+                        anonymous users access to our data. For that, we need to paste the next policy, just change your
+                        bucket name where is required:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_aws">Bucket Policy</div>
+                        <div id="codebox">
+                                <pre><code data-language="html">
+                    {{ '{' }}
+                        "Version": "2012-10-17",
+                        "Statement": 
+                            [
+                                {{ '{' }}
+                                    "Sid": "AddPermission",
+                                    "Effect": "Allow",
+                                    "Principal": "*",
+                                    "Action": "s3:GetObject",
+                                    "Resource": "arn:aws:s3:::<b class="replace">(bucket name)</b>/*"
+                                }
+                            ]
+                    }
+                </code></pre>
+                        </div>
+                        <br>
+                        That’s it, everything is ready for the deployment. The last step is to upload our angular app;
+                        make sure to build the app and upload the output as explained here:
+                        <br><br>
+                        Open your command prompt and go to the folder of your project.There, run this command:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+                        <div id="codebox">
+                                <code>
+                        ng build
+                                </code>
+                        </div>
+                        <br>
+                        You’ll find a new folder on your project called “dist”. This is the output of the angular app
+                        building. In case you don’t know where the dist folder is, go to the “angular.json”:
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i6.png"></div>
+                        <br><br>
+                        Now, you can just upload manually the folder to your bucket and that’s it, the problem is that
+                        you’ll need to upload the foldereverything you make changes on your app, to fix that, I’ll
+                        explain how to automatically upload your app.
+                        <br><br>
+                        Go to <a
+                                href="https://console.aws.amazon.com/iam/home#/users">https://console.aws.amazon.com/iam/home#/users</a>.
+                        Here we are going to create an user to give it access to the bucket.
+                        <br><br>
+                        Press on “Add User”. Give a name to the user a select the “Programmatic access” in “Access type”
+                        and click “Next”.
+                        <br><br>
+                        On permission, we are going to give our user the default administrator access. Select “Attach
+                        existing policies directly” then, check the “AdministratorAccess-Amplify” box.
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i7.png"></div>
+                        <br><br>
+                        Click “Next” until the user is created, and you get to this screen:
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i8.png"></div>
+                        <br><br>
+                        I suggest downloading the .csv file, we are going to need the access key and the secret access
+                        key.
+                        <br><br>
+                        We need to install AWS CLI to be able to use AWS command on our command prompt. In case you have
+                        a Mac, you only need to run this command:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+                        <div id="codebox">
+                                <code>
+                                        brew install awscli
+                                </code>
+                        </div>
+                        <br>
+                        In case you have Windows, please follow the AWS installation guide (just install the .msi file):
+                        <a
+                                href="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html">https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html</a>
+                        <br><br>To
+                        check if you successfully installed AWS CLI, in the terminal run:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+                        <div id="codebox">
+                                <code>
+                                        aws --version
+                                </code>
+                        </div>
+                        <br>
+                        When you get sure you have AWS CLI, run:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+                        <div id="codebox">
+                                <code>
+                                        aws configure
+                                </code>
+                        </div>
+                        <br>
+                        Enter your AWS Access Key ID, AWS Secret Access Key, Default region name (time zone name) and
+                        Default output format (“ENTER” will do).
+                        <br><br>
+                        On your project, go to the “package.json” and add this line:"aws-deploy" :
+                        <br><br>
+                        <div class="codeheader" id="codeheader_js">package.json</div>
+                        <div id="codebox">
+                                <code>
+                                        "aws s3 sync dist/<span class="replace">(app name)</span>/s3://<span class="replace">(bucket name)</span>"
+                                </code>
+                        </div>
+                        <br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i9.png"></div>
+                        And... that's it. Congrats! You made it, now everything you need to do everything you make any
+                        change on your app is run:
+                        <br><br>
+                        <div class="codeheader" id="codeheader_commands">Command Prompt</div>
+                        <div id="codebox">
+                                <code>
+                                        ng build && npm run aws-deploy
+                                </code>
+                        </div>
+                        <br>
+                        And go to your URL, right now, as we haven’t done anything yet, you should see something
+                        like this:
+                        <br><br>
+                        <div class="center"><img src="../../../../assets/doc/cv/install/i10.png"></div>
+                </div>
 
         </div>
 
-        </div>
+</div>
