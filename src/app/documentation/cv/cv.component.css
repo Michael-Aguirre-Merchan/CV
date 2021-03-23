@@ -3,3 +3,63 @@
     margin: 30px 0 30px 20px;
 
 }
+
+.card {
+
+    background-color: black;
+    height: 15rem;
+    position: relative;
+    width: 100%;
+
+}
+
+.card-body {
+
+    transform: rotateY(180deg);
+    padding: 3rem 15px;
+
+}
+
+.flip-front, .card-body {
+
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    /* display: block; */
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+}
+
+.flip-effect {
+
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.card:hover .flip-effect {
+
+    transform: rotateY(180deg);
+
+}
+
+.second-row {
+
+    margin-top: 30px;
+
+}
+
+.card-front-text {
+
+    padding: 5.5rem 0;
+    font-size: 40px;
+
+}
+
+.back-btn {
+
+    margin-top: 15px;
+
+}
