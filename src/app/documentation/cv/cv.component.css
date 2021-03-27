@@ -6,10 +6,11 @@
 
 .card {
 
-    background-color: black;
+    background-color: #1a222e8f;
     height: 15rem;
     position: relative;
     width: 100%;
+    border: none;
 
 }
 
@@ -47,7 +48,7 @@
 
 .second-row {
 
-    margin-top: 30px;
+    margin: 30px 0;
 
 }
 
@@ -58,8 +59,72 @@
 
 }
 
-.back-btn {
+.back-btn, .back-btn:focus, .back-btn:active {
 
     margin-top: 15px;
+    background-color: white;
+    color: black;
+    border-color: transparent;
+
+    box-shadow: none;
+    outline: none;
+
+}
+
+.bi, span {
+
+    font-size: 35px;
+
+}
+
+@media only screen and (max-width: 767px) { 
+
+    .second-row {
+
+        margin: 0;
+
+    }
+
+    .col-md-6 {
+
+        margin-top: 30px;
+
+    }
+
+    .first-col {
+
+        margin: 0;
+
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    
+    .bi, span {
+
+        font-size: 30px;
+
+    }
+
+}
+
+@media only screen and (max-width: 325px) {
+
+    .bi, span {
+
+        font-size: 20px;
+
+    } 
+
+}
+
+@media only screen and (max-width: 325px) { 
+
+    .bi {
+
+        display: none;
+
+    }
 
 }

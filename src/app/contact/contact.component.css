@@ -69,9 +69,8 @@ input[type=text], input[type=email], textarea, textarea:focus {
     color: black;
     border-color: transparent;
 
-    /* FIXME Outline when active*/
-    outline: none !important;
-    outline-color: transparent !important;
+    box-shadow: none;
+    outline: none;
 
 }
 
