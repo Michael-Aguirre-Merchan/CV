@@ -13,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
 import { FileSaverModule } from 'ngx-filesaver';
-import { OwlModule } from 'ngx-owl-carousel';  
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { OwlModule } from 'ngx-owl-carousel';
     FileSaverModule,
     HttpClientModule,
     ReactiveFormsModule,
-    OwlModule,
+    BrowserAnimationsModule,
     NgxChessBoardModule.forRoot()
   ],
   providers: [],

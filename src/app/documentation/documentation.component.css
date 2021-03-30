@@ -3,3 +3,34 @@
     margin: 30px 0 30px 20px;
 
 }
+
+.card {
+
+    background-color: #171C2A;
+    padding: 0;
+
+}
+
+.card-text {
+
+    margin-bottom: 20px;
+
+}
+
+.btn, .btn:focus, .btn:active {
+
+    background-color: white;
+    color: black;
+    border-color: transparent;
+
+    box-shadow: none;
+    outline: none;
+
+}
+
+.button {
+
+    width: fit-content;
+    margin-left: auto;
+
+}
