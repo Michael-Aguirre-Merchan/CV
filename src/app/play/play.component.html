@@ -6,29 +6,58 @@
 
         <div class="col-10 col-md-3 players" id="player-1">
 
-            White
+            <h3 class="pieces-tittles white-text">White</h3>
+            <div>
 
+                <span class="white-text">Pawns: </span> <span class="black-text" id="p">0</span><br>
+                <span class="white-text">Rooks: </span> <span class="black-text" id="r">0</span><br>
+                <span class="white-text">Knights: </span> <span class="black-text" id="k">0</span><br>
+                <span class="white-text">Bishops: </span> <span class="black-text" id="b">0</span><br>
+                <span class="white-text">Queens: </span> <span class="black-text" id="q">0</span><br>
+                <div class="row justify-content-around row-buttons">
+                    <div class="col-5">
+                        <button class="control-buttons" (click)="reset()">Reset</button>
+                    </div>
+                    <div class="col-5">
+                        <button class="control-buttons" (click)="undo()">Undo</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <div class="col-md-6">
 
             <div class="board-container">
-            <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
+                <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size">
+                </ngx-chess-board>
             </div>
 
         </div>
 
         <div class="col-10 col-md-3 players" id="player-2">
 
-            Black
-            <!-- <button class="control" (click)="toggle()">
-                <span class="pause-icon" *ngIf="!paused"></span>
-                <span class="play-icon" *ngIf="paused"></span>
-              </button> -->
+            <h3 class="pieces-tittles black-text">Black</h3>
+            <div>
+
+                <span class="black-text">Pawns: </span> <span class="white-text" id="P">0</span><br>
+                <span class="black-text">Rooks: </span> <span class="white-text" id="R">0</span><br>
+                <span class="black-text">Knights: </span> <span class="white-text" id="K">0</span><br>
+                <span class="black-text">Bishops: </span> <span class="white-text" id="B">0</span><br>
+                <span class="black-text">Queens: </span> <span class="white-text" id="Q">0</span><br>
+                <div class="row justify-content-around row-buttons">
+                    <div class="col-5">
+                        <button class="control-buttons" (click)="reset()">Reset</button>
+                    </div>
+                    <div class="col-5">
+                        <button class="control-buttons" (click)="undo()">Undo</button>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
     </div>
 
-    
+
 </div>

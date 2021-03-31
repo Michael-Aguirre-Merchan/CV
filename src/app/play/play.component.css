@@ -73,7 +73,44 @@
     border-left: 10px solid #a25be2;
     border-right: 10px solid #a25be2;
   }
-  
+
+  .white-text {
+
+    color: #baa378;
+
+  }
+
+  .black-text {
+
+    color: #61543d;
+
+  }
+
+  .row-buttons{
+
+    margin-top: 40px;
+
+  }
+
+  .pieces-tittles {
+
+    margin: 20px;
+
+  }
+
+  .control-buttons, .control-buttons:active, .control-buttons:focus {
+
+    width: 100%;
+    box-shadow: none;
+    border-color: white;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+
+    box-shadow: none;
+    outline: none;
+
+  }
 
 @media only screen and (max-width: 768px) {
 

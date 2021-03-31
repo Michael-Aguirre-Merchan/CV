@@ -91,10 +91,107 @@ export class PlayComponent implements OnInit {
 
   public size = this.ngOnInit()
 
-  public moveCallback(move: MoveChange): void {
+  reset() {
+
+    this.boardManager.reset();
+
+  }
+
+  undo() {
+    this.boardManager.undo();
     this.fen = this.boardManager.getFEN();
+}
+
+  public moveCallback(move: MoveChange): void {
+
+    this.fen = this.boardManager.getFEN();
+
     // console.log(this.fen);
     if (move.x === true) {
+
+      function countString(str, letter) {
+        let count = 0;  
+        for (let i = 0; i < str.length; i++) {
+            if (str.charAt(i) == letter) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+      var i = this.fen.indexOf(" ");
+      var board = this.fen.substring(0, i)
+
+      var result = countString(board, "P");
+      var Pnum = 8 - result
+      var P = Pnum.toString();
+      document.getElementById("P")!.innerHTML = P;
+
+      var result = countString(board, "R");
+      var Rnum = 2 - result
+      var R = Rnum.toString();
+      document.getElementById("R")!.innerHTML = R;
+
+      var result = countString(board, "N");
+      var Nnum = 2 - result
+      var N = Nnum.toString();
+      document.getElementById("K")!.innerHTML = N;
+
+      var result = countString(board, "B");
+      var Bnum = 2 - result
+      var B = Bnum.toString();
+      document.getElementById("B")!.innerHTML = B;
+
+      var result = countString(board, "Q");
+      var Qnum = 1 - result
+      var Q = Qnum.toString();
+      document.getElementById("Q")!.innerHTML = Q;
+
+      var result = countString(board, "p");
+      var pnum = 8 - result
+      var p = pnum.toString();
+      document.getElementById("p")!.innerHTML = p;
+
+      var result = countString(board, "r");
+      var rnum = 2 - result
+      var r = rnum.toString();
+      document.getElementById("r")!.innerHTML = r;
+
+      var result = countString(board, "n");
+      var nnum = 2 - result
+      var n = nnum.toString();
+      document.getElementById("k")!.innerHTML = n;
+
+      var result = countString(board, "b");
+      var bnum = 2 - result
+      var b = bnum.toString();
+      document.getElementById("b")!.innerHTML = b;
+
+      var result = countString(board, "q");
+      var qnum = 1 - result
+      var q = qnum.toString();
+      document.getElementById("q")!.innerHTML = q;
+
+
+      
+
+      // var sentence = this.fen.substring(0, this.fen.length - 13);
+      // console.log(sentence);
+      // var noOfCountsOfEachCharacter = {};
+      // var getCharacter, counter, actualLength, noOfCount;
+      // for (counter = 0, actualLength = sentence.length; counter <
+      //   actualLength; ++counter) {
+      //   getCharacter = sentence.charAt(counter);
+      //   noOfCount = noOfCountsOfEachCharacter[getCharacter];
+      //   noOfCountsOfEachCharacter[getCharacter] = noOfCount ? noOfCount + 1 : 1;
+      // }
+      // for (getCharacter in noOfCountsOfEachCharacter) {
+      //   if (getCharacter != ' ')
+      //     console.log("Character=" + getCharacter + " Occurrences=" +
+      //       noOfCountsOfEachCharacter[getCharacter]);
+      // }
+
+      
 
       if (move.color === 'black') {
 

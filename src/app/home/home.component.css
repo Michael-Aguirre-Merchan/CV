@@ -110,7 +110,7 @@
 
 }
 
-.accordion-buttons{
+.accordion-buttons, .accordion-buttons:active, .accordion-buttons:focus{
 
     width: 100%;
     box-shadow: none;
@@ -118,10 +118,6 @@
     background-color: transparent;
     color: white;
     border-radius: 5px;
-
-}
-
-.accordion-buttons:focus {
 
     box-shadow: none;
     outline: none;
