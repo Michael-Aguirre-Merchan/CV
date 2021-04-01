@@ -20,6 +20,7 @@
 .players {
 
     background-color: rgba(26, 35, 46, 70%);
+    height: fit-content;
 
 }
 
@@ -48,6 +49,14 @@
     cursor: pointer;
     outline: none;
   }
+
+  .justify-content-center {
+
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
   
   .control:hover {
     opacity: 1;
@@ -116,6 +125,18 @@
 
     .board-container {
         margin: 30px auto 30px auto;
+    }
+
+    .down-player {
+
+      margin: 30px;
+
+    }
+
+    .players {
+
+      padding-bottom: 30px
+
     }
 
 }

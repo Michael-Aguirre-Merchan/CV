@@ -51,13 +51,13 @@ export class AppComponent implements OnInit {
     var ad: any;
 
     ab = document.getElementById("responsiveMenu")
-    ad = document.getElementById("body")
+    ad = document.getElementById("bodys")
 
-
-    ad.style.display = "block";
-    ad.style.backgroundColor = "rgba(0,0,0,0.5)";
+    ad.style.opacity = 0.3
+    // ad.style.backgroundColor = "rgba(0,0,0,0.5)";
     ad.style.marginLeft = "0";
     ab.style.display = "block";
+    ab.style.opacity = 1
     // ab.style.left = pos.left+'px'
 
     // ab.style.margin = "0"
@@ -72,13 +72,14 @@ export class AppComponent implements OnInit {
     var ae: any;
 
     ac = document.getElementById("responsiveMenu")
-    ae = document.getElementById("body")
+    ae = document.getElementById("bodys")
 
     ac.style.display = "none";
 
-    ae.style.display = "none";
-    ae.style.backgroundColor = "transparent";
-    ae.style.marginLeft = "200px"
+    ae.style.display = "block";
+    ae.style.opacity = 1
+    // ae.style.backgroundColor = "transparent";
+    // ae.style.marginLeft = "200px"
 
   }
 

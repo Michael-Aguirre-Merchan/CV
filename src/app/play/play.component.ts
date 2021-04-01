@@ -15,6 +15,8 @@ export class PlayComponent implements OnInit {
   public fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
   paused = true;
 
+
+
   ngOnInit(): number {
 
     let newBoardSize: number;
@@ -40,15 +42,29 @@ export class PlayComponent implements OnInit {
 
     newBoardSize = (screen.width * screenUsed!) - 30;
 
+    var colChess = document.getElementById("col-chess")
+
     setTimeout(() => {
-
-      var P1 = document.getElementById("player-1")
-      var P2 = document.getElementById("player-2")
-
-      P1!.style.height = newBoardSize + 'px'
-      P2!.style.height = newBoardSize + 'px'
+      
+      colChess!.style.height = newBoardSize + 30 + 'px'
 
     }, 1);
+    
+
+    if (screen.width > 767) {
+
+
+      setTimeout(() => {
+
+        var P1 = document.getElementById("player-1")
+        var P2 = document.getElementById("player-2")
+
+        P1!.style.height = newBoardSize + 'px'
+        P2!.style.height = newBoardSize + 'px'
+
+      }, 1);
+
+    }
 
     // this.pausable = interval(800).pipe(pausable()) as PausableObservable<number>;
     // this.pausable.subscribe(this.shoot.bind(this));
@@ -94,13 +110,23 @@ export class PlayComponent implements OnInit {
   reset() {
 
     this.boardManager.reset();
+    document.getElementById("P")!.innerHTML = "0";
+    document.getElementById("R")!.innerHTML = "0";
+    document.getElementById("K")!.innerHTML = "0";
+    document.getElementById("B")!.innerHTML = "0";
+    document.getElementById("Q")!.innerHTML = "0";
+    document.getElementById("p")!.innerHTML = "0";
+    document.getElementById("r")!.innerHTML = "0";
+    document.getElementById("k")!.innerHTML = "0";
+    document.getElementById("b")!.innerHTML = "0";
+    document.getElementById("q")!.innerHTML = "0";
 
   }
 
   undo() {
     this.boardManager.undo();
     this.fen = this.boardManager.getFEN();
-}
+  }
 
   public moveCallback(move: MoveChange): void {
 
@@ -109,15 +135,16 @@ export class PlayComponent implements OnInit {
     // console.log(this.fen);
     if (move.x === true) {
 
+
       function countString(str, letter) {
-        let count = 0;  
+        let count = 0;
         for (let i = 0; i < str.length; i++) {
-            if (str.charAt(i) == letter) {
-                count += 1;
-            }
+          if (str.charAt(i) == letter) {
+            count += 1;
+          }
         }
         return count;
-    }
+      }
 
       var i = this.fen.indexOf(" ");
       var board = this.fen.substring(0, i)
@@ -171,27 +198,6 @@ export class PlayComponent implements OnInit {
       var qnum = 1 - result
       var q = qnum.toString();
       document.getElementById("q")!.innerHTML = q;
-
-
-      
-
-      // var sentence = this.fen.substring(0, this.fen.length - 13);
-      // console.log(sentence);
-      // var noOfCountsOfEachCharacter = {};
-      // var getCharacter, counter, actualLength, noOfCount;
-      // for (counter = 0, actualLength = sentence.length; counter <
-      //   actualLength; ++counter) {
-      //   getCharacter = sentence.charAt(counter);
-      //   noOfCount = noOfCountsOfEachCharacter[getCharacter];
-      //   noOfCountsOfEachCharacter[getCharacter] = noOfCount ? noOfCount + 1 : 1;
-      // }
-      // for (getCharacter in noOfCountsOfEachCharacter) {
-      //   if (getCharacter != ' ')
-      //     console.log("Character=" + getCharacter + " Occurrences=" +
-      //       noOfCountsOfEachCharacter[getCharacter]);
-      // }
-
-      
 
       if (move.color === 'black') {
 
