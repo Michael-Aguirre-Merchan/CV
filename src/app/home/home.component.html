@@ -36,11 +36,13 @@
 
   <div class="row justify-content-around">
 
-    <div class="col-lg-6 align-self-center">
-      <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
+    <div class="col-lg-6 align-self-center a-col">
+      <div class="board-place">
+        <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
+      </div>
     </div>
 
-    <div class="col-10 col-lg-6  text-col">
+    <div class="col-10 col-lg-6  text-col b-col">
       <div class="d-flex">
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">
@@ -58,13 +60,13 @@
                 If you are going the right way, white will move. If not, here you have some help:
                 <br><br>
                 <div class="row justify-content-around">
-                <div class="col-4">
-                <button class="accordion-buttons" (click)="reset()">Reset</button>
+                  <div class="col-4">
+                    <button class="accordion-buttons" (click)="reset()">Reset</button>
+                  </div>
+                  <div class="col-4">
+                    <button class="accordion-buttons" (click)="undo()">Undo</button>
+                  </div>
                 </div>
-                <div class="col-4">
-                <button class="accordion-buttons" (click)="undo()">Undo</button>
-              </div>
-              </div>
               </div>
             </div>
           </div>
@@ -83,9 +85,9 @@
                 things that can be improved and perfected).<br><br>
                 I hope I can capture the attention of everyone who visits this website and helps a little to create
                 a distraction from the daily routine.<br><br>
-                <i>"One doesn't have to play well; it's enough to play better than your opponent."</i> 
+                <i>"One doesn't have to play well; it's enough to play better than your opponent."</i>
                 <br>
-                
+
                 <i>– Siegbert Tarrasch</i>
               </div>
             </div>

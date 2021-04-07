@@ -124,11 +124,37 @@
 
 }
 
+.board-place {
+
+    width: fit-content; 
+    margin: auto;
+
+}
+
+.footer-fix {
+
+    padding: 0 50px;
+
+}
+
 @keyframes color-change {
     0% { color: #6c757d }
     50% { color: rgb(255, 255, 255); }
     100% { color: #6c757d; }
   }
+
+  @media only screen and (min-width: 1700px) {
+  .b-col {
+      flex: 0 0 auto;
+      width: 50%;
+  }
+  .a-col {
+
+    flex: 0 0 auto;
+    width: 50%;
+
+  }
+}
 
 @media only screen and (max-width: 991px) {
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxChessBoardComponent, MoveChange } from 'ngx-chess-board'
+import { HostListener } from "@angular/core";
 declare const animation: any;
 
 @Component({
@@ -11,8 +12,20 @@ export class HomeComponent implements OnInit {
 
   public fen = '5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 40';
 
+  constructor() {
+    this.getScreenSize();
+  }
+
   @ViewChild('board')
   boardManager!: NgxChessBoardComponent;
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(): number {
+    var screenWidth = window.innerWidth;
+    console.log(screenWidth);
+
+    return screenWidth
+  }
 
   ngOnInit(): number {
 
@@ -21,7 +34,13 @@ export class HomeComponent implements OnInit {
     let newBoardSize: number;
     var screenUsed: number;
 
-    if (screen.width >= 1200) {
+    if (screen.width >= 1700) {
+
+      screenUsed = 0.32
+
+    }
+
+    if (screen.width < 1700) {
 
       screenUsed = 0.757 * 0.5
 
@@ -39,7 +58,7 @@ export class HomeComponent implements OnInit {
 
     }
 
-    newBoardSize = (screen.width * screenUsed!) - 30;
+    newBoardSize = (this.getScreenSize() * screenUsed!) - 30;
 
     setTimeout(() => {
       this.boardManager.setFEN('5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 40');
@@ -48,6 +67,8 @@ export class HomeComponent implements OnInit {
     return newBoardSize
 
   }
+
+  public size = this.ngOnInit()
 
   confetti(args: any) {
     return window['confetti'].apply(this, arguments);
@@ -63,7 +84,7 @@ export class HomeComponent implements OnInit {
   undo() {
     this.boardManager.undo();
     this.fen = this.boardManager.getFEN();
-}
+  }
 
   public moveCallback(move: MoveChange): void {
     this.fen = this.boardManager.getFEN();
@@ -143,7 +164,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  public size = this.ngOnInit()
+
 
 }
 

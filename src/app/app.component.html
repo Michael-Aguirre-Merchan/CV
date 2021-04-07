@@ -3,52 +3,34 @@
 <div class="container-fluid master" id="body">
 
   <div class="row row-margin">
-
     <div class="col-12">
-
       <div class="for-back-img">
         <div class="for-back-color">
-
           <div class="row no-padding justify-content-end" style="position: relative;">
-
             <div class="col-2">
-
               <div class="normal-menu">
-
                 <app-menu></app-menu>
-
               </div>
-
             </div>
 
 
             <div class="col-12 col-xl-10 right-part">
-
               <div class="dots-container">
-
                 <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
-
               </div>
 
               <div id="bodys" class="responsive-menu-fix">
                 <router-outlet></router-outlet>
               </div>
 
-              <div class="col-11 col-xl-10 footer" *ngIf="router.url != '/about'">
-
+              <!-- <div class="col-11 col-xl-10 footer" *ngIf="router.url != '/about'">
                 <footer class="footer-container">
-
                   2021 All Rights Reserved.
-
                 </footer>
-
-              </div>
-
+              </div> -->
             </div>
 
-
             <!-- Responsive Menu - Start -->
-
             <div>
               <div id="responsiveMenu" class="responsive-menu">
                 <app-menu></app-menu>
@@ -57,7 +39,6 @@
             </div>
 
             <!-- Responsive Menu - End -->
-
           </div>
         </div>
       </div>
