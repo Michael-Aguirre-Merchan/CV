@@ -79,6 +79,15 @@ hr {
 
 }
 
+.cv, .cv:focus, .cv:active {
+
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+
+ }
+
 .box-3 {
 
     background-color: rgba(26, 35, 46);
