@@ -1,34 +1,23 @@
 <app-loading *ngIf="!loaded"></app-loading>
 
-<div class="container-fluid master" id="body">
+<div id="body">
 
-  <div class="row row-margin">
-    <div class="col-12">
-      <div class="for-back-img">
-        <div class="for-back-color">
-          <div class="row no-padding justify-content-end" style="position: relative;">
-            <div class="col-2">
-              <div class="normal-menu">
-                <app-menu></app-menu>
-              </div>
-            </div>
+  <div class="row no-padding no-margin">
+    <div class="col-2 no-padding">
+        <app-menu></app-menu>
+    </div>
 
+    <div class="col-12 col-xl-10 no-padding">
+        <!-- <div class="dots-container">
+          <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
+        </div> -->
 
-            <div class="col-12 col-xl-10 right-part">
-              <div class="dots-container">
-                <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
-              </div>
+        <div id="body">
+          <router-outlet></router-outlet>
+        </div>
 
-              <div id="bodys" class="responsive-menu-fix">
-                <router-outlet></router-outlet>
-              </div>
+      </div>
 
-              <!-- <div class="col-11 col-xl-10 footer" *ngIf="router.url != '/about'">
-                <footer class="footer-container">
-                  2021 All Rights Reserved.
-                </footer>
-              </div> -->
-            </div>
 
             <!-- Responsive Menu - Start -->
             <div>
@@ -41,9 +30,3 @@
             <!-- Responsive Menu - End -->
           </div>
         </div>
-      </div>
-    </div>
-
-  </div>
-
-</div>

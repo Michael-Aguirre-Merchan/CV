@@ -50,8 +50,8 @@
 hr{ 
   
 
-    height: 115%;
-    width: 5px;     
+    height: 94%;
+    width: 5px !important;     
     position: absolute !important; 
     right: 1.8rem;
     border-radius: 100px;

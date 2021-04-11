@@ -38,6 +38,55 @@ p {
 
 }
 
+.for-back-img {
+
+  background-image: url(./assets/back.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.for-back-color {
+
+  background-color: rgba(23, 32, 42, 95%);
+  overflow-y: auto;
+  height: 96vh;   
+  margin: 2vh 0;
+  
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100px;
+  margin: 10px 0;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 100px;
+  height: 10px;
+}
+
+.no-padding {
+
+  padding: 0 !important;
+
+}
+
+.no-margin {
+
+  margin: 0 !important;
+
+}
+
 
 #codebox {
     padding: 15px 25px;
