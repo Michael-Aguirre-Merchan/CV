@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
     var ad: any;
 
     ab = document.getElementById("responsiveMenu")
-    ad = document.getElementById("bodys")
+    ad = document.getElementById("body")
 
     ad.style.opacity = 0.3
     // ad.style.backgroundColor = "rgba(0,0,0,0.5)";
@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
     var ae: any;
 
     ac = document.getElementById("responsiveMenu")
-    ae = document.getElementById("bodys")
+    ae = document.getElementById("body")
 
     ac.style.display = "none";
 

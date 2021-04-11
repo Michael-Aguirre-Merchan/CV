@@ -52,6 +52,7 @@ p {
 
   background-color: rgba(23, 32, 42, 95%);
   overflow-y: auto;
+  overflow-x: hidden;
   height: 96vh;   
   margin: 2vh 0;
   

@@ -1,6 +1,6 @@
 <app-loading *ngIf="!loaded"></app-loading>
 
-<div id="body">
+<div>
 
   <div class="row no-padding no-margin">
     <div class="col-2 no-padding">
@@ -8,9 +8,9 @@
     </div>
 
     <div class="col-12 col-xl-10 no-padding">
-        <!-- <div class="dots-container">
+        <div class="dots-container">
           <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
-        </div> -->
+        </div>
 
         <div id="body">
           <router-outlet></router-outlet>
@@ -20,12 +20,10 @@
 
 
             <!-- Responsive Menu - Start -->
-            <div>
               <div id="responsiveMenu" class="responsive-menu">
                 <app-menu></app-menu>
                 <a class="close" (click)="closeMenu()">&times;</a>
               </div>
-            </div>
 
             <!-- Responsive Menu - End -->
           </div>

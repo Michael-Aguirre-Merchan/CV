@@ -122,3 +122,14 @@ hr {
     }
 
 }
+
+@media only screen and (max-width: 1199px) { 
+
+    .menu-container {
+
+        left: 0.8rem;
+        margin-top: 2vh;
+        width: 200px;
+    }
+
+}

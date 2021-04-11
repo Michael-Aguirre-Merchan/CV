@@ -156,6 +156,16 @@
   }
 }
 
+@media only screen and (max-width: 1199px) {
+
+    .home-first {
+
+        padding-top: 80px;
+
+    }
+
+}
+
 @media only screen and (max-width: 991px) {
 
     .text-col {
@@ -168,16 +178,6 @@
 
         width: fit-content;
     
-    }
-
-}
-
-@media only screen and (max-width: 628px) {
-
-    .home-first {
-
-        padding: 30px;
-
     }
 
 }
