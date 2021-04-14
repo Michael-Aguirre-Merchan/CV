@@ -2,7 +2,7 @@
 
         <div class="row justify-content-center">
 
-                <h2 class="contact-title">CV</h2>
+                <h2 class="title">CV</h2>
 
                 <div class="col-10">
 
@@ -64,7 +64,7 @@
                         Once you get past the registration, on the services’ navigation menu, search for the S3 title,
                         under it, you’ll find “Storage option”.
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i1.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i1.png"></div>
                         <br><br>
                         The first thing we need to do is to create a bucket name but be careful, this name needs to be
                         unique and chosen wisely as it will appear on your website URL.
@@ -75,23 +75,23 @@
                         Click on “Create Bucket” at the bottom and that's it, you now have your S3 bucket. You should
                         see something like this on your S3 dashboard:
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i2.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i2.png"></div>
                         <br><br>
                         If everything is correct, try going to your bucket just to check everything is alright, the URL
                         will be:
                         <br><br>
-                        <div class="center"><b><span class="replace">(bucket name)</span>.s3-website.<span
+                        <div class="col-10"><b><span class="replace">(bucket name)</span>.s3-website.<span
                                                 class="replace">(time zone name)</span>.amazonaws.com</b></div>
                         <br>
                         You can find your time zone name on the bucket list, on the region description. In my case, it
                         should be:
                         <br><br>
-                        <div class="center"><b><span class="replace">documentation-cv</span>.s3-website.<span
+                        <div class="col-10"><b><span class="replace">documentation-cv</span>.s3-website.<span
                                                 class="replace">us-west-1</span>.amazonaws.com</b></div>
                         <br>
                         Assuming that everything is correct, you should be now seen a website like this:
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i3.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i3.png"></div>
                         <br><br>
                         Congrats! You have created your bucket correctly.      
                         <br><br>
@@ -104,12 +104,12 @@
                         <br><br>
                         Inside it, enable the static webhosting and leave everything else like this:
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i4.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i4.png"></div>
                         <br><br>
                         Go to the “Permissions” tab and press the “Edit” button in the “Block public access” section.
                         Uncheck the “Block all public access” and just leave the first and second box checked:
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i5.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i5.png"></div>
                         <br><br>
                         Save changes and go to the “Bucket Policy” section and click on “Edit”. Here we need to grant
                         anonymous users access to our data. For that, we need to paste the next policy, just change your
@@ -149,7 +149,7 @@
                         You’ll find a new folder on your project called “dist”. This is the output of the angular app
                         building. In case you don’t know where the dist folder is, go to the “angular.json”:
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i6.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i6.png"></div>
                         <br><br>
                         Now, you can just upload manually the folder to your bucket and that’s it, the problem is that
                         you’ll need to upload the foldereverything you make changes on your app, to fix that, I’ll
@@ -165,11 +165,11 @@
                         On permission, we are going to give our user the default administrator access. Select “Attach
                         existing policies directly” then, check the “AdministratorAccess-Amplify” box.
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i7.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i7.png"></div>
                         <br><br>
                         Click “Next” until the user is created, and you get to this screen:
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i8.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i8.png"></div>
                         <br><br>
                         I suggest downloading the .csv file, we are going to need the access key and the secret access
                         key.
@@ -218,7 +218,7 @@
                                 </code>
                         </div>
                         <br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i9.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i9.png"></div>
                         And... that's it. Congrats! You made it, now everything you need to do everything you make any
                         change on your app is run:
                         <br><br>
@@ -232,7 +232,7 @@
                         And go to your URL, right now, as we haven’t done anything yet, you should see something
                         like this:
                         <br><br>
-                        <div class="center"><img src="../../../../assets/doc/cv/install/i10.png"></div>
+                        <div class="col-10"><img src="../../../../assets/doc/cv/install/i10.png"></div>
                 </div>
 
         </div>

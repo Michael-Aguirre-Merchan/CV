@@ -4,27 +4,27 @@
 
   <div class="row no-padding no-margin">
     <div class="col-2 no-padding">
-        <app-menu></app-menu>
+      <app-menu></app-menu>
     </div>
 
     <div class="col-12 col-xl-10 no-padding">
-        <div class="dots-container">
-          <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
-        </div>
-
-        <div id="body">
-          <router-outlet></router-outlet>
-        </div>
-
+      <div class="dots-container">
+        <button class="open-menu" (click)="openMenu()"><i class="bi bi-three-dots dots-buton"></i></button>
       </div>
 
+      <div id="body">
+        <router-outlet></router-outlet>
+      </div>
 
-            <!-- Responsive Menu - Start -->
-              <div id="responsiveMenu" class="responsive-menu">
-                <app-menu></app-menu>
-                <a class="close" (click)="closeMenu()">&times;</a>
-              </div>
+    </div>
 
-            <!-- Responsive Menu - End -->
-          </div>
-        </div>
+
+    <!-- Responsive Menu - Start -->
+    <div id="responsiveMenu" class="responsive-menu">
+      <app-menu></app-menu>
+      <a class="close" (click)="closeMenu()">&times;</a>
+    </div>
+
+    <!-- Responsive Menu - End -->
+  </div>
+</div>

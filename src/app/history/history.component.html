@@ -2,7 +2,7 @@
 
   <div class="row justify-content-around">
 
-    <H1 class="contact-title">
+    <H1 class="title">
 
       Background
 
@@ -10,16 +10,16 @@
 
     <div class="col-md-6 justify-content-end">
 
-      <h3 class="contact-title">
+      <h3 class="title">
         Education
       </h3>
 
-      <ul class="list-unstyled lists">
+      <ul class="lists">
         <hr>
         <li class="media my-4" *ngFor="let edu of edus">
           <div class="media-body">
-              <h4 class="p-2">{{edu.cert}}</h4>
-              <h5 class="p-2">{{edu.place}}</h5>
+            <h4 class="p-2">{{edu.cert}}</h4>
+            <h5 class="p-2">{{edu.place}}</h5>
             <h6>{{edu.date}}</h6>
             {{edu.detail}}
           </div>
@@ -32,18 +32,18 @@
 
     <div class="col-md-6 justify-content-end">
 
-      <h3 class="contact-title">
+      <h3 class="title">
 
         Work
 
       </h3>
 
-      <ul class="list-unstyled lists">
+      <ul class="lists">
         <hr>
         <li class="media my-4" *ngFor="let work of works">
           <div class="media-body">
-              <h4 class="p-2">{{work.cert}}</h4>
-              <h5 class="p-2">{{work.place}}</h5>
+            <h4 class="p-2">{{work.cert}}</h4>
+            <h5 class="p-2">{{work.place}}</h5>
             <h6>{{work.date}}</h6>
             {{work.detail}}
           </div>
