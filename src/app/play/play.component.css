@@ -4,6 +4,33 @@
 
 }
 
+.title {
+
+  margin-bottom: 10px;
+
+}
+
+.p-2 {
+
+  width: fit-content; 
+  margin-right: 10px;
+  display: none;
+
+}
+
+.white-pieces, .black-pieces {
+
+  margin-bottom: 15px;
+
+}
+
+#player-1, #plater-2 {
+
+  height: fit-content;
+  padding-bottom: 10px;
+
+}
+
 .board-container {
 
     margin: 0px auto 0px auto;
@@ -15,6 +42,13 @@
 
     background-color: rgba(26, 35, 46, 70%);
     height: fit-content;
+
+}
+
+svg {
+
+  height: 35px;
+  width: 22.5px;
 
 }
 
@@ -91,11 +125,11 @@
 
   .row-buttons{
 
-    margin-top: 40px;
+    margin-top: 20px;
 
   }
 
-  .pieces-tittles {
+  .pieces-titles {
 
     margin: 20px;
 

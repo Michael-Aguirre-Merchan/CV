@@ -15,7 +15,147 @@ export class PlayComponent implements OnInit {
   public fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
   paused = true;
 
+  num(n: number): Array<number> {
+    return Array(n);
+  }
 
+  counting (fen:any) {
+
+    function countString(str, letter) {
+      let count = 0;
+      for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) == letter) {
+          count += 1;
+        }
+      }
+      return count;
+    }
+
+    var i = fen.indexOf(" ");
+    var board = fen.substring(0, i)
+
+    var result = countString(board, "P");
+    var Pnum = 8 - result
+    var P = Pnum.toString();
+    document.getElementById("P")!.innerHTML = P;
+    let PCount:number = Pnum
+    while (PCount > 0) {
+      var pieceNumber = PCount - 1
+      var name = 'WhitePawn' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      PCount -= 1
+    }
+
+    var result = countString(board, "R");
+    var Rnum = 2 - result
+    var R = Rnum.toString();
+    document.getElementById("R")!.innerHTML = R;  
+    let RCount:number = Rnum
+    while (RCount > 0) {
+      var pieceNumber = RCount - 1
+      var name = 'WhiteRook' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      RCount -= 1
+    }
+
+    var result = countString(board, "N");
+    var Nnum = 2 - result
+    var N = Nnum.toString();
+    document.getElementById("K")!.innerHTML = N;
+    let NCount:number = Nnum
+    while (NCount > 0) {
+      var pieceNumber = NCount - 1
+      var name = 'WhiteKnight' + pieceNumber
+      
+      document.getElementById(name)!.style.display = "flex"
+      NCount -= 1
+    }
+
+    var result = countString(board, "B");
+    var Bnum = 2 - result
+    var B = Bnum.toString();
+    document.getElementById("B")!.innerHTML = B;
+    let BCount:number = Bnum
+    while (BCount > 0) {
+      var pieceNumber = BCount - 1
+      var name = 'WhiteBishop' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      BCount -= 1
+    }
+
+    var result = countString(board, "Q");
+    var Qnum = 1 - result
+    var Q = Qnum.toString();
+    document.getElementById("Q")!.innerHTML = Q;
+    let QCount:number = Qnum
+    while (QCount > 0) {
+      var pieceNumber = QCount - 1
+      var name = 'WhiteQueen' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      QCount -= 1
+    }
+
+    var result = countString(board, "p");
+    var pnum = 8 - result
+    var p = pnum.toString();
+    document.getElementById("p")!.innerHTML = p;
+    let pCount:number = pnum
+    while (pCount > 0) {
+      var pieceNumber = pCount - 1
+      var name = 'BlackPawn' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      pCount -= 1
+    }
+
+    var result = countString(board, "r");
+    var rnum = 2 - result
+    var r = rnum.toString();
+    document.getElementById("r")!.innerHTML = r;
+    let rCount:number = rnum
+    while (rCount > 0) {
+      var pieceNumber = rCount - 1
+      var name = 'BlackRook' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      rCount -= 1
+    }
+
+    var result = countString(board, "n");
+    var nnum = 2 - result
+    var n = nnum.toString();
+    document.getElementById("k")!.innerHTML = n;
+    let nCount:number = nnum
+    while (nCount > 0) {
+      var pieceNumber = nCount - 1
+      var name = 'BlackKnight' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      nCount -= 1
+    }
+
+    var result = countString(board, "b");
+    var bnum = 2 - result
+    var b = bnum.toString();
+    document.getElementById("b")!.innerHTML = b;
+    let bCount:number = bnum
+    while (bCount > 0) {
+      var pieceNumber = bCount - 1
+      var name = 'BlackBishop' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      bCount -= 1
+    }
+
+    var result = countString(board, "q");
+    var qnum = 1 - result
+    var q = qnum.toString();
+    document.getElementById("q")!.innerHTML = q;
+    let qCount:number = qnum
+    while (qCount > 0) {
+      var pieceNumber = qCount - 1
+      var name = 'BlackQueen' + pieceNumber
+      document.getElementById(name)!.style.display = "flex"
+      qCount -= 1
+    }
+
+    }
 
   ngOnInit(): number {
 
@@ -59,8 +199,8 @@ export class PlayComponent implements OnInit {
         var P1 = document.getElementById("player-1")
         var P2 = document.getElementById("player-2")
 
-        P1!.style.height = newBoardSize + 'px'
-        P2!.style.height = newBoardSize + 'px'
+        P1!.style.minHeight = newBoardSize + 'px'
+        P2!.style.minHeight = newBoardSize + 'px'
 
       }, 1);
 
@@ -126,6 +266,7 @@ export class PlayComponent implements OnInit {
   undo() {
     this.boardManager.undo();
     this.fen = this.boardManager.getFEN();
+    this.counting(this.fen)
   }
 
   public moveCallback(move: MoveChange): void {
@@ -135,69 +276,7 @@ export class PlayComponent implements OnInit {
     // console.log(this.fen);
     if (move.x === true) {
 
-
-      function countString(str, letter) {
-        let count = 0;
-        for (let i = 0; i < str.length; i++) {
-          if (str.charAt(i) == letter) {
-            count += 1;
-          }
-        }
-        return count;
-      }
-
-      var i = this.fen.indexOf(" ");
-      var board = this.fen.substring(0, i)
-
-      var result = countString(board, "P");
-      var Pnum = 8 - result
-      var P = Pnum.toString();
-      document.getElementById("P")!.innerHTML = P;
-
-      var result = countString(board, "R");
-      var Rnum = 2 - result
-      var R = Rnum.toString();
-      document.getElementById("R")!.innerHTML = R;
-
-      var result = countString(board, "N");
-      var Nnum = 2 - result
-      var N = Nnum.toString();
-      document.getElementById("K")!.innerHTML = N;
-
-      var result = countString(board, "B");
-      var Bnum = 2 - result
-      var B = Bnum.toString();
-      document.getElementById("B")!.innerHTML = B;
-
-      var result = countString(board, "Q");
-      var Qnum = 1 - result
-      var Q = Qnum.toString();
-      document.getElementById("Q")!.innerHTML = Q;
-
-      var result = countString(board, "p");
-      var pnum = 8 - result
-      var p = pnum.toString();
-      document.getElementById("p")!.innerHTML = p;
-
-      var result = countString(board, "r");
-      var rnum = 2 - result
-      var r = rnum.toString();
-      document.getElementById("r")!.innerHTML = r;
-
-      var result = countString(board, "n");
-      var nnum = 2 - result
-      var n = nnum.toString();
-      document.getElementById("k")!.innerHTML = n;
-
-      var result = countString(board, "b");
-      var bnum = 2 - result
-      var b = bnum.toString();
-      document.getElementById("b")!.innerHTML = b;
-
-      var result = countString(board, "q");
-      var qnum = 1 - result
-      var q = qnum.toString();
-      document.getElementById("q")!.innerHTML = q;
+      this.counting(this.fen)      
 
       if (move.color === 'black') {
 
