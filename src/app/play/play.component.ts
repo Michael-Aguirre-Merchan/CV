@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgxChessBoardComponent, MoveChange } from 'ngx-chess-board';
+import { NgxChessBoardComponent, MoveChange, PieceIconInput } from 'ngx-chess-board';
 import { PausableObservable, pausable } from 'rxjs-pausable';
 import { interval } from 'rxjs';
 
@@ -14,6 +14,21 @@ export class PlayComponent implements OnInit {
 
   public fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
   paused = true;
+
+  icons: PieceIconInput = {
+    blackBishopUrl: 'assets/svg/bishop.svg',
+    blackKingUrl: 'assets/svg/king.svg',   // Put path to every icon like above
+    blackKnightUrl: 'assets/svg/knight.svg',
+    blackPawnUrl: 'assets/svg/pawn.svg',
+    blackQueenUrl: 'assets/svg/queen.svg',
+    blackRookUrl: 'assets/svg/castle.svg',
+    whiteBishopUrl: 'assets/svg/bishop.svg',
+    whiteKingUrl: 'assets/svg/king.svg',
+    whiteKnightUrl: 'assets/svg/knight.svg',
+    whitePawnUrl: 'assets/svg/pawn.svg',
+    whiteQueenUrl: 'assets/svg/queen.svg',
+    whiteRookUrl: 'assets/svg/castle.svg'
+  };
 
   num(n: number): Array<number> {
     return Array(n);
