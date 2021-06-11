@@ -31,9 +31,9 @@ export class AboutComponent implements OnInit {
 
     a = document.getElementById(card.id);
     b = document.getElementById("card-deck");
-    c = document.getElementById("footer")
+    // c = document.getElementById("footer")
 
-    c.style.opacity = 0
+    // c.style.opacity = 0
     setTimeout(function () {
       b.style.display = "flex";
       a.style.display = "none"
@@ -43,10 +43,10 @@ export class AboutComponent implements OnInit {
 
     setTimeout(function () {
       b.style.opacity = 1
-      c.style.opacity = 1
-      c.style.position = "absolute";
-      c.style.width = "91.6666666667%";
-      c.style.bottom = "0";
+      // c.style.opacity = 1
+      // c.style.position = "absolute";
+      // c.style.width = "91.6666666667%";
+      // c.style.bottom = "0";
     }, 2000);
 
   }
@@ -58,26 +58,28 @@ export class AboutComponent implements OnInit {
     var z: any;
     var yz: any;
 
+    console.log(card.id);
+    
     x = document.getElementById("card-deck");
     y = document.getElementById(card.id);
-    yz = document.getElementById("footer");
+    // yz = document.getElementById("footer");
 
     setTimeout(function () {
       x.style.display = "none";
       y.style.display = "block"
     }, 1500);
 
-    yz.style.opacity = 0
+    // yz.style.opacity = 0
     x.style.opacity = 0
 
     setTimeout(function () {
-      yz.style.opacity = 1
+      // yz.style.opacity = 1
       y.style.opacity = 1
-      yz.style.position = "fixed";
-      yz.style.width = document.getElementById(card.id)!.offsetWidth + 30 + 'px';
+      // yz.style.position = "fixed";
+      // yz.style.width = document.getElementById(card.id)!.offsetWidth + 30 + 'px';
     }, 2000);
 
-    yz.style.bottom = "2%";
+    // yz.style.bottom = "2%";
     // yz.style.width = "74%";
 
   };

@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
     newBoardSize = (this.getScreenSize() * screenUsed!) - 30;
 
     setTimeout(() => {
-      this.boardManager.setFEN('5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 40');
+      this.boardManager.setFEN('5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 58');
     }, 2);
 
     return newBoardSize
@@ -77,7 +77,7 @@ export class HomeComponent implements OnInit {
   reset() {
 
     this.boardManager.reset();
-    this.boardManager.setFEN('5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 40');
+    this.boardManager.setFEN('5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 58');
 
   }
 
@@ -90,7 +90,7 @@ export class HomeComponent implements OnInit {
     this.fen = this.boardManager.getFEN();
 
     console.log(this.fen);
-    console.log(move.move);
+    console.log(move);
 
     if (move.checkmate === true) {
 

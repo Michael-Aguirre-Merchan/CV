@@ -10,7 +10,7 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'play', component: PlayComponent },
-  { path: 'about', component: AboutComponent },
+  // { path: 'about', component: AboutComponent },
   { path: 'background', component: HistoryComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'documentation', loadChildren: () => import('./documentation/documentation.module').then(m => m.DocumentationModule) },

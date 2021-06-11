@@ -73,7 +73,6 @@
 
 .accordion-button {
 
-    /* background-color: white; */
     color: white;
     background-color: transparent;
 
@@ -96,7 +95,7 @@
 .accordion-flush .accordion-button {
 
     border-color: white !important;
-
+    border-width: 5;
 }
 
 .accordion-button:focus {
@@ -107,6 +106,14 @@
 .accordion-tittle {
 
     margin: 0;
+
+}
+
+.accordion-item {
+
+    background-color: rgb(95 158 160 / 0%);
+    border-width: 1px;
+    border-color: white;
 
 }
 

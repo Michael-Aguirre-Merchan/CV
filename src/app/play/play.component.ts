@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgxChessBoardComponent, MoveChange, PieceIconInput } from 'ngx-chess-board';
+import { NgxChessBoardComponent, MoveChange, PieceIconInput, NgxChessBoardView} from 'ngx-chess-board';
 import { PausableObservable, pausable } from 'rxjs-pausable';
 import { interval } from 'rxjs';
+
 
 @Component({
   selector: 'app-play',
@@ -12,22 +13,24 @@ export class PlayComponent implements OnInit {
   @ViewChild('board')
   boardManager!: NgxChessBoardComponent;
 
+  public darkTileColor = 'rgba(29, 55, 79, 0.3)';
+  public lightTileColor = 'rgba(248, 150, 34, 0.3)';
   public fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
   paused = true;
 
   icons: PieceIconInput = {
-    blackBishopUrl: 'assets/svg/bishop.svg',
-    blackKingUrl: 'assets/svg/king.svg',   // Put path to every icon like above
-    blackKnightUrl: 'assets/svg/knight.svg',
-    blackPawnUrl: 'assets/svg/pawn.svg',
-    blackQueenUrl: 'assets/svg/queen.svg',
-    blackRookUrl: 'assets/svg/castle.svg',
-    whiteBishopUrl: 'assets/svg/bishop.svg',
-    whiteKingUrl: 'assets/svg/king.svg',
-    whiteKnightUrl: 'assets/svg/knight.svg',
-    whitePawnUrl: 'assets/svg/pawn.svg',
-    whiteQueenUrl: 'assets/svg/queen.svg',
-    whiteRookUrl: 'assets/svg/castle.svg'
+    blackBishopUrl: 'assets/svg/black/bishop.svg',
+    blackKingUrl: 'assets/svg/black/king.svg',   // Put path to every icon like above
+    blackKnightUrl: 'assets/svg/black/knight.svg',
+    blackPawnUrl: 'assets/svg/black/pawn.svg',
+    blackQueenUrl: 'assets/svg/black/queen.svg',
+    blackRookUrl: 'assets/svg/black/castle.svg',
+    whiteBishopUrl: 'assets/svg/white/bishop.svg',
+    whiteKingUrl: 'assets/svg/white/king.svg',
+    whiteKnightUrl: 'assets/svg/white/knight.svg',
+    whitePawnUrl: 'assets/svg/white/pawn.svg',
+    whiteQueenUrl: 'assets/svg/white/queen.svg',
+    whiteRookUrl: 'assets/svg/white/castle.svg'
   };
 
   num(n: number): Array<number> {
@@ -405,39 +408,39 @@ export class PlayComponent implements OnInit {
     this.fen = this.boardManager.getFEN();
 
     // console.log(this.fen);
-    if (move.x === true) {
+    // if (move.x === true) {
 
-      this.counting(this.fen)
+    //   this.counting(this.fen)
 
-      if (move.color === 'black') {
+    //   if (move.color === 'black') {
 
-        this.confetti({
-          angle: this.random(20, 70),
-          spread: this.random(30, 50),
-          // particleCount: this.random(40, 50),`
-          particleCount: 250,
-          origin: {
-            y: 0.6
-          }
-        });
+    //     this.confetti({
+    //       angle: this.random(20, 70),
+    //       spread: this.random(30, 50),
+    //       // particleCount: this.random(40, 50),`
+    //       particleCount: 250,
+    //       origin: {
+    //         y: 0.6
+    //       }
+    //     });
 
-      }
+    //   }
 
-      if (move.color === 'white') {
+    //   if (move.color === 'white') {
 
-        this.confetti({
-          angle: this.random(120, 170),
-          spread: this.random(30, 50),
-          // particleCount: this.random(40, 50),`
-          particleCount: 250,
-          origin: {
-            y: 0.6
-          }
-        });
+    //     this.confetti({
+    //       angle: this.random(120, 170),
+    //       spread: this.random(30, 50),
+    //       // particleCount: this.random(40, 50),`
+    //       particleCount: 250,
+    //       origin: {
+    //         y: 0.6
+    //       }
+    //     });
 
-      }
+    //   }
 
-    }
+    // }
 
   }
 

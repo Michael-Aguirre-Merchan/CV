@@ -137,7 +137,7 @@
         <div class="col-md-6" id="col-chess">
 
             <div class="board-container">
-                <ngx-chess-board #board [pieceIcons]="icons" (moveChange)="moveCallback($event)" class="board" [size]="size">
+                <ngx-chess-board #board [lightTileColor]="lightTileColor" [darkTileColor]="darkTileColor" [pieceIcons]="icons" (moveChange)="moveCallback($event)" class="board" [size]="size">
                 </ngx-chess-board>
             </div>
 
