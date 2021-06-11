@@ -1,27 +1,33 @@
-# Chess
+- 👋 Hi, I’m Michael
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+- 👀 I'm a motivated university student with an exemplary academic record and an aspiration to advance in the software industry. 
 
-## Development server
+- 🌱 I’m currently learning angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- 💞️ I have an innate capacity for leadership and strategic thinking.
 
-## Code scaffolding
+This project started just as a test on that amazing chess board I found (you can check it out <a href="https://github.com/grzegorz103/ngx-chess-board">here</a>) and ended up as my CV
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project was made with angular using Html, SCSS and TypeScript. I used bootstrap to wrap it all
 
-## Build
+You can check it out <a href="michaelmerchan.com">here</a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+I hope you like it
 
-## Running unit tests
+-----------------------------------------------------------------------------------------------------------------------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- 👋 Hola, soy Michael
 
-## Running end-to-end tests
+- 👀 Soy un estudiante universitario motivado con un expediente académico ejemplar y una aspiración de avanzar en la industria del software.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- 🌱 Actualmente estoy aprendiendo Angular
 
-## Further help
+- 💞️ Tengo una capacidad innata de liderazgo y pensamiento estratégico.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este proyecto comenzó como una prueba de este tablero de ajedrez increíble que encontré (puedes verlo <a href="https://github.com/grzegorz103/ngx-chess-board">aquí</a>) y terminó como mi hoja de vida
+
+Este proyecto se realizó con angular usando Html, SCSS y TypeScript. Usé bootstrap para organizarlo todo
+
+Puedes verlo <a href="michaelmerchan.com">aquí</a>
+
+Espero que te guste
