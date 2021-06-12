@@ -8,7 +8,7 @@
 
 - I have an innate capacity for leadership and strategic thinking. 💁‍♂️
 
-This project started just as a test on that amazing chess board I found (you can check it out <a href="https://github.com/grzegorz103/ngx-chess-board">here</a>) and ended up as my CV.
+This project started just as a test on that amazing chess board I <a href="https://github.com/grzegorz103/ngx-chess-board">found</a> and ended up as my CV.
 
 This project was made with angular using Html, SCSS and TypeScript. I used bootstrap to wrap it all.
 
@@ -28,7 +28,7 @@ I hope you like it.
 
 - Tengo una capacidad innata de liderazgo y pensamiento estratégico. 💁‍♂️
 
-Este proyecto comenzó como una prueba de este tablero de ajedrez increíble que encontré (puedes verlo <a href="https://github.com/grzegorz103/ngx-chess-board">aquí</a>) y terminó como mi hoja de vida.
+Este proyecto comenzó como una prueba de este tablero de ajedrez increíble que href="https://github.com/grzegorz103/ngx-chess-board">encontré</a> y terminó como mi hoja de vida.
 
 Este proyecto se realizó con angular usando Html, SCSS y TypeScript. Usé bootstrap para organizarlo todo.
 
