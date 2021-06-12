@@ -10,6 +10,8 @@ This project started just as a test on that amazing chess board I found (you can
 
 This project was made with angular using Html, SCSS and TypeScript. I used bootstrap to wrap it all.
 
+You can check it out <a href="https://michaelmerchan.com">here</a>
+
 I hope you like it.
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -26,6 +28,6 @@ Este proyecto comenzó como una prueba de este tablero de ajedrez increíble que
 
 Este proyecto se realizó con angular usando Html, SCSS y TypeScript. Usé bootstrap para organizarlo todo.
 
-Puedes ver mi sitio <a href="https://michaelmerchan">aquí</a>
+Puedes ver mi sitio <a href="https://michaelmerchan.com">aquí</a>
 
 Espero que te guste.
