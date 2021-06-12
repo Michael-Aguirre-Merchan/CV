@@ -28,7 +28,7 @@ I hope you like it.
 
 - Tengo una capacidad innata de liderazgo y pensamiento estratégico. 💁‍♂️
 
-Este proyecto comenzó como una prueba de este tablero de ajedrez increíble que href="https://github.com/grzegorz103/ngx-chess-board">encontré</a> y terminó como mi hoja de vida.
+Este proyecto comenzó como una prueba de este tablero de ajedrez increíble que <a href="https://github.com/grzegorz103/ngx-chess-board">encontré</a> y terminó como mi hoja de vida.
 
 Este proyecto se realizó con angular usando Html, SCSS y TypeScript. Usé bootstrap para organizarlo todo.
 
