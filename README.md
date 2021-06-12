@@ -1,3 +1,5 @@
+<h1>My CV</h1>
+
 👋 Hi, I’m Michael,
 
 - I'm a motivated university student with excellent GPA and an aspiration to advance in the software industry. 👨🏻‍🎓
@@ -15,6 +17,8 @@ You can check it out <a href="https://michaelmerchan.com">here</a>
 I hope you like it.
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+<h1>Mi HV</h1>
 
 👋 Hola, soy Michael,
 
