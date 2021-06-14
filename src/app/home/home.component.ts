@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgxChessBoardComponent, MoveChange } from 'ngx-chess-board'
+import { NgxChessBoardComponent, PieceIconInput, MoveChange } from 'ngx-chess-board'
 import { HostListener } from "@angular/core";
 declare const animation: any;
 
@@ -9,15 +9,30 @@ declare const animation: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('board')
+  boardManager!: NgxChessBoardComponent;
 
   public fen = '5r1k/1pN1R1pp/1Pb5/n1r1P1n1/7N/b2Q4/7P/1R4K1 b - - 0 40';
+  public darkTileColor = 'rgba(29, 55, 79, 0.3)';
+  public lightTileColor = 'rgba(248, 150, 34, 0.3)';
 
+  icons: PieceIconInput = {
+    blackBishopUrl: 'assets/svg/black/bishop.svg',
+    blackKingUrl: 'assets/svg/black/king.svg',   // Put path to every icon like above
+    blackKnightUrl: 'assets/svg/black/knight.svg',
+    blackPawnUrl: 'assets/svg/black/pawn.svg',
+    blackQueenUrl: 'assets/svg/black/queen.svg',
+    blackRookUrl: 'assets/svg/black/castle.svg',
+    whiteBishopUrl: 'assets/svg/white/bishop.svg',
+    whiteKingUrl: 'assets/svg/white/king.svg',
+    whiteKnightUrl: 'assets/svg/white/knight.svg',
+    whitePawnUrl: 'assets/svg/white/pawn.svg',
+    whiteQueenUrl: 'assets/svg/white/queen.svg',
+    whiteRookUrl: 'assets/svg/white/castle.svg'
+  };
   constructor() {
     this.getScreenSize();
   }
-
-  @ViewChild('board')
-  boardManager!: NgxChessBoardComponent;
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(): number {
