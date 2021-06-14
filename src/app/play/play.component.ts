@@ -19,18 +19,18 @@ export class PlayComponent implements OnInit {
   paused = true;
 
   icons: PieceIconInput = {
-    blackBishopUrl: 'assets/svg/black/bishop.svg',
-    blackKingUrl: 'assets/svg/black/king.svg',   // Put path to every icon like above
-    blackKnightUrl: 'assets/svg/black/knight.svg',
-    blackPawnUrl: 'assets/svg/black/pawn.svg',
-    blackQueenUrl: 'assets/svg/black/queen.svg',
-    blackRookUrl: 'assets/svg/black/castle.svg',
-    whiteBishopUrl: 'assets/svg/white/bishop.svg',
-    whiteKingUrl: 'assets/svg/white/king.svg',
-    whiteKnightUrl: 'assets/svg/white/knight.svg',
-    whitePawnUrl: 'assets/svg/white/pawn.svg',
-    whiteQueenUrl: 'assets/svg/white/queen.svg',
-    whiteRookUrl: 'assets/svg/white/castle.svg'
+    blackBishopUrl: 'assets/svg/black/blue_bishop.svg',
+    blackKingUrl: 'assets/svg/black/blue_king.svg',   // Put path to every icon like above
+    blackKnightUrl: 'assets/svg/black/blue_knight.svg',
+    blackPawnUrl: 'assets/svg/black/blue_pawn.svg',
+    blackQueenUrl: 'assets/svg/black/blue_queen.svg',
+    blackRookUrl: 'assets/svg/black/blue_castle.svg',
+    whiteBishopUrl: 'assets/svg/white/gold_bishop.svg',
+    whiteKingUrl: 'assets/svg/white/gold_king.svg',
+    whiteKnightUrl: 'assets/svg/white/gold_knight.svg',
+    whitePawnUrl: 'assets/svg/white/gold_pawn.svg',
+    whiteQueenUrl: 'assets/svg/white/gold_queen.svg',
+    whiteRookUrl: 'assets/svg/white/gold_castle.svg'
   };
 
   num(n: number): Array<number> {
