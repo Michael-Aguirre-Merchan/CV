@@ -26,7 +26,7 @@
     "bootstrap-icons": "^1.5.0",
     "file-saver": "^2.0.5",
     "jquery": "^3.6.0",
-    "ngx-chess-board": "^2.1.10",
+    "ngx-chess-board": "^2.0.7",
     "ngx-filesaver": "^11.0.0",
     "ngx-owl-carousel-o": "^5.0.0",
     "rxjs": "^6.6.7",
