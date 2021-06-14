@@ -27,7 +27,7 @@
   <div class="row justify-content-around">
     <div class="col-lg-6 align-self-center a-col">
       <div class="board-place">
-        <ngx-chess-board #board (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
+        <ngx-chess-board #board [lightTileColor]="lightTileColor" [darkTileColor]="darkTileColor" [pieceIcons]="icons" (moveChange)="moveCallback($event)" class="board" [size]="size"></ngx-chess-board>
       </div>
     </div>
 
