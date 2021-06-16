@@ -13,7 +13,7 @@ export class MenuComponent {
     private fileSaverService: FileSaverService,) { }
 
   onDown() {
-    this.httpClient.get("assets/CV.pdf", {
+    this.httpClient.get("assets/Michael Aguirre M - CV.pdf", {
       observe: 'response',
       responseType: 'blob'
     }).subscribe(res => {
